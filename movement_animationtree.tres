@@ -1,0 +1,32 @@
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://i8igxsu4no4s"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4cr1n"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fuk28"]
+animation = &"take_damage_animation"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nwm8y"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lpfip"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f3tjm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n2t3d"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_usska"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vmno5"]
+switch_mode = 2
+
+[resource]
+states/idle/node = SubResource("AnimationNodeAnimation_4cr1n")
+states/idle/position = Vector2(371, 64)
+states/take_damage_animation/node = SubResource("AnimationNodeAnimation_fuk28")
+states/take_damage_animation/position = Vector2(471, 322)
+states/walk/node = SubResource("AnimationNodeAnimation_nwm8y")
+states/walk/position = Vector2(460, 178)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_lpfip"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_f3tjm"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_n2t3d"), "walk", "take_damage_animation", SubResource("AnimationNodeStateMachineTransition_usska"), "take_damage_animation", "walk", SubResource("AnimationNodeStateMachineTransition_vmno5")]
+graph_offset = Vector2(0, 30.603441)

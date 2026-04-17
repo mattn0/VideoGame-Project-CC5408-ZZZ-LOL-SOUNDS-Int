@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bytnr38guhsr4"]
+
+[ext_resource type="Script" uid="uid://cbqkfbd4j3j54" path="res://characters (players_enemys)/enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://nm6jh5x1wb8r" path="res://monsters_resource/Mushroom with VFX/Mushroom-Idle.png" id="1_7k104"]
+[ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="4_slujw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
+size = Vector2(30, 44)
+
+[sub_resource type="Animation" id="Animation_4gyqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_qi2p4"]
+resource_name = "idle"
+length = 0.665
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iifgy"]
+_data = {
+&"RESET": SubResource("Animation_4gyqm"),
+&"idle": SubResource("Animation_qi2p4")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5j71"]
+size = Vector2(38, 47)
+
+[node name="enemy" type="CharacterBody2D" unique_id=721203139]
+script = ExtResource("1_4gyqm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342286146]
+shape = SubResource("RectangleShape2D_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1251958791]
+position = Vector2(1.0000153, -0.49999237)
+scale = Vector2(1.275, 1.40625)
+texture = ExtResource("1_7k104")
+hframes = 7
+vframes = 2
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=750269567]
+libraries/ = SubResource("AnimationLibrary_iifgy")
+
+[node name="HitboxComponent" type="Area2D" parent="." unique_id=339235230]
+position = Vector2(-162, -75)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_slujw")
+metadata/_custom_type_script = "uid://c6vunqhf64ov2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=200175317]
+position = Vector2(163, 74.5)
+shape = SubResource("RectangleShape2D_o5j71")

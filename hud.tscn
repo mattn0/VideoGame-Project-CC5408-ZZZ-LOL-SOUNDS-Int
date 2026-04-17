@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0lmpe62fwxuq"]
+
+[ext_resource type="FontFile" uid="uid://6t3g78nnpqit" path="res://font/BoldPixels.ttf" id="1_37p78"]
+[ext_resource type="Script" uid="uid://cv0rmx35ipyt5" path="res://hud.gd" id="1_64ctp"]
+
+[sub_resource type="Theme" id="Theme_64ctp"]
+default_font = ExtResource("1_37p78")
+default_font_size = 50
+
+[node name="HUD" type="CanvasLayer" unique_id=2088576928]
+script = ExtResource("1_64ctp")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1727018692]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -382.0
+offset_bottom = 45.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1773783559]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = SubResource("Theme_64ctp")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2042981425]
+layout_mode = 2
+text = "Good Mushrooms: "
+
+[node name="MushroomLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=789885108]
+layout_mode = 2
+text = "XX"

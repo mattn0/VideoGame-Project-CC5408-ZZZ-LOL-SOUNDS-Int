@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://b28mfnbbqlmrl"]
+
+[ext_resource type="Texture2D" uid="uid://8djkxpwu41vf" path="res://resources/AnimatedMushroomPink.png" id="1_c71mp"]
+[ext_resource type="Script" uid="uid://s5cuy801l816" path="res://characters (players_enemys)/mushroom_point.gd" id="1_g7d4f"]
+[ext_resource type="AudioStream" uid="uid://c6x1wocky255w" path="res://sounds/dragon-studio-pop-402323.mp3" id="3_g7d4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20ot4"]
+size = Vector2(43, 39.333344)
+
+[sub_resource type="Animation" id="Animation_kpbpq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c71mp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4882812, 0.49804685)]
+}
+
+[sub_resource type="Animation" id="Animation_g7d4f"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c71mp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.23333333, 0.36666667, 0.5, 0.6333333, 0.76666665, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_hyeed"]
+resource_name = "puff"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c71mp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.017315233, 0.033333335, 0.053519815, 0.06666666, 0.08342794, 0.099999994, 0.1164843, 0.13333333, 0.1505, 0.1658, 0.1829, 0.1943),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.4882812, 0.49804685), Vector2(0.4424229, 0.5146982), Vector2(0.4, 0.408), Vector2(0.33944055, 0.28202632), Vector2(0.3, 0.306), Vector2(0.2748581, 0.19525321), Vector2(0.25, 0.255), Vector2(0.22527355, 0.15782866), Vector2(0.2, 0.204), Vector2(0.14193338, 0.09661286), Vector2(0.1, 0.102), Vector2(0.07388526, 0.04692533), Vector2(0.05, 0.051)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8iqx5"]
+_data = {
+&"RESET": SubResource("Animation_kpbpq"),
+&"idle": SubResource("Animation_g7d4f"),
+&"puff": SubResource("Animation_hyeed")
+}
+
+[node name="mushroom_point" type="Area2D" unique_id=1540310177]
+position = Vector2(224, 90)
+script = ExtResource("1_g7d4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=206420458]
+position = Vector2(76.5, 7.6666718)
+shape = SubResource("RectangleShape2D_20ot4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=211856015]
+libraries/ = SubResource("AnimationLibrary_8iqx5")
+autoplay = &"idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=709661718]
+position = Vector2(76.99999, 7)
+scale = Vector2(0.4882812, 0.49804685)
+texture = ExtResource("1_c71mp")
+hframes = 3
+vframes = 3
+
+[node name="PointSound" type="AudioStreamPlayer" parent="." unique_id=20133327]
+stream = ExtResource("3_g7d4f")
