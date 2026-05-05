@@ -22,8 +22,8 @@ Game="*uid://besdybpt115qs"
 
 [display]
 
-window/size/viewport_width=1176
-window/size/viewport_height=665
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [input]
 

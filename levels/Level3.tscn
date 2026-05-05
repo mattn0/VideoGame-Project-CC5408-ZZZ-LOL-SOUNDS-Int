@@ -1,0 +1,39 @@
+[gd_scene format=4 uid="uid://k05k13gs7aax"]
+
+[ext_resource type="PackedScene" uid="uid://b4r8ef2pqnxfs" path="res://levels/Dungeon/DungeonExitE.tscn" id="1_uog4x"]
+[ext_resource type="PackedScene" uid="uid://c2rstybqltufe" path="res://levels/Dungeon/Dungeon_N&S.tscn" id="2_fqqs4"]
+[ext_resource type="PackedScene" uid="uid://c4h0xcsitjyej" path="res://levels/Dungeon/Dungeon_W&N.tscn" id="3_52gcn"]
+[ext_resource type="PackedScene" uid="uid://cq20ny6jn0brh" path="res://levels/Dungeon/Dungeon_E&S.tscn" id="4_ws61b"]
+[ext_resource type="PackedScene" uid="uid://ioo7kl0nmwph" path="res://levels/Dungeon/DungeonExitN.tscn" id="5_m7lwk"]
+[ext_resource type="PackedScene" uid="uid://b5mp28vwb25pg" path="res://levels/Dungeon/DungeonExitS.tscn" id="6_gtknj"]
+[ext_resource type="PackedScene" uid="uid://bk0u4av58sgba" path="res://levels/Dungeon/DungeonExitW.tscn" id="7_t3rlc"]
+[ext_resource type="PackedScene" uid="uid://bm3pyasonejk0" path="res://levels/Dungeon/DungeonSafeRoom.tscn" id="8_77jv8"]
+[ext_resource type="PackedScene" uid="uid://dr0josoh18dob" path="res://levels/Dungeon/Dungeon_E&N.tscn" id="9_w4yws"]
+[ext_resource type="PackedScene" uid="uid://c3oyw4c1a25iy" path="res://levels/Dungeon/Dungeon_W&S.tscn" id="10_en7ln"]
+[ext_resource type="PackedScene" uid="uid://bkfeydjd6mh5d" path="res://levels/Dungeon/Dungeon_E&W.tscn" id="11_5nt5t"]
+[ext_resource type="PackedScene" uid="uid://d3hdsscmib1r" path="res://levels/Dungeon/Dungeon_N&S&E&W.tscn" id="12_4axbk"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u4y3f"]
+resource_name = "CemetaryRomms"
+scenes/1/scene = ExtResource("1_uog4x")
+scenes/2/scene = ExtResource("5_m7lwk")
+scenes/3/scene = ExtResource("6_gtknj")
+scenes/4/scene = ExtResource("7_t3rlc")
+scenes/5/scene = ExtResource("8_77jv8")
+scenes/6/scene = ExtResource("9_w4yws")
+scenes/7/scene = ExtResource("10_en7ln")
+scenes/8/scene = ExtResource("11_5nt5t")
+scenes/9/scene = ExtResource("12_4axbk")
+scenes/10/scene = ExtResource("2_fqqs4")
+scenes/11/scene = ExtResource("3_52gcn")
+scenes/12/scene = ExtResource("4_ws61b")
+
+[sub_resource type="TileSet" id="TileSet_s7kpb"]
+sources/0 = SubResource("TileSetScenesCollectionSource_u4y3f")
+
+[node name="Level3" type="Node2D" unique_id=1641898302]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901838211]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAACABQAAAAAAAAAAAACQCfAAAAAAAAAAAABwBQAC0AAAAAAAAABgCfAC0AAAAAAAAACwBQANb/AAAAAAAADACgANb/AAAAAAAACADvANb/AAAAAAAABQA+Adb/AAAAAAAABADvAAMAAAAAAAAAAwDvAKn/AAAAAAAACgDvAID/AAAAAAAACQDvAFT/AAAAAAAAAgCfAID/AAAAAAAAAQA+AYD/AAAAAAAABAA=")
+tile_set = SubResource("TileSet_s7kpb")
