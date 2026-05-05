@@ -1,4 +1,4 @@
-class_name Player
+class_name Boss
 extends CharacterBody2D
 
 @export var speed = 300
@@ -10,12 +10,12 @@ extends CharacterBody2D
 @onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/movement/playback"]
 @onready var camara: Camera2D = $camara
 
-var maxlife = 30
-var life = 30
+var maxlife = 100
+var life = 100
 var point = 0
 var maxpoint = 3
 var knockback = Vector2.ZERO
-var knockback_force = 400
+var knockback_force = 0
 
 
 func _ready() -> void:
@@ -27,19 +27,19 @@ func _physics_process(delta: float) -> void:
 
 	var direction = Vector2.ZERO
 
-	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	#direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	#direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
-	if direction != Vector2.ZERO:
-		direction = direction.normalized()
-		velocity = direction * speed
-		playback.travel("walk")
+	#if direction != Vector2.ZERO:
+	#	direction = direction.normalized()
+	#	velocity = direction * speed
+	#	playback.travel("walk")
 
-		if direction.x != 0:
-			sprite_2d.flip_h = direction.x < 0
-	else:
-		velocity = Vector2.ZERO
-		playback.travel("idle")
+	#	if direction.x != 0:
+	#		sprite_2d.flip_h = direction.x < 0
+	#else:
+	#	velocity = Vector2.ZERO
+	#	playback.travel("idle")
 		
 	knockback = lerp(knockback, Vector2.ZERO, 0.1)	
 		
