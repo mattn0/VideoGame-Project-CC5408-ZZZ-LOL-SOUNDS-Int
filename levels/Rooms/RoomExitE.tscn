@@ -2817,6 +2817,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_c664s")
 sources/1 = SubResource("TileSetAtlasSource_by8u1")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ictni"]
+b = Vector2(0, 1281)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2m2mc"]
+b = Vector2(1.27294115e-05, 224)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lsvlf"]
+a = Vector2(-1, 722)
+b = Vector2(0, 1)
+
 [node name="RoomExitW" type="Node2D" unique_id=1821600163]
 
 [node name="TileSuelo" type="TileMapLayer" parent="." unique_id=666875322]
@@ -2838,3 +2848,37 @@ tile_set = SubResource("TileSet_x571x")
 [node name="TileStruct" type="TileMapLayer" parent="." unique_id=1179314552]
 tile_map_data = PackedByteArray("AABFAAcAAQAbAAQAAABFAAgAAQAbAAUAAABGAAQAAQAcAAEAAABGAAUAAQAcAAIAAABGAAYAAQAcAAMAAABGAAcAAQAcAAQAAABGAAgAAQAcAAUAAABHAAQAAQAdAAEAAABHAAUAAQAdAAIAAABHAAYAAQAdAAMAAABHAAcAAQAdAAQAAABHAAgAAQAdAAUAAABIAAYAAQAeAAMAAABIAAcAAQAeAAQAAABIAAgAAQAeAAUAAAA=")
 tile_set = SubResource("TileSet_ad043")
+
+[node name="ColissionN" type="StaticBody2D" parent="." unique_id=1380782256]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColissionN" unique_id=1745036703]
+rotation = 4.712389
+shape = SubResource("SegmentShape2D_ictni")
+
+[node name="ColissionS" type="StaticBody2D" parent="." unique_id=279014922]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColissionS" unique_id=813413981]
+position = Vector2(0, 720)
+rotation = 4.712389
+shape = SubResource("SegmentShape2D_ictni")
+
+[node name="CollisionW" type="StaticBody2D" parent="." unique_id=314278261]
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionW" unique_id=1283855258]
+rotation = 4.712389
+shape = SubResource("SegmentShape2D_2m2mc")
+
+[node name="CollisionW2" type="StaticBody2D" parent="." unique_id=259508340]
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionW2" unique_id=1277846218]
+position = Vector2(497, -2.1724558e-05)
+rotation = 4.712389
+shape = SubResource("SegmentShape2D_2m2mc")
+
+[node name="CollisiionE" type="StaticBody2D" parent="." unique_id=192243650]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisiionE" unique_id=1640083843]
+position = Vector2(1281, -1)
+shape = SubResource("SegmentShape2D_lsvlf")
