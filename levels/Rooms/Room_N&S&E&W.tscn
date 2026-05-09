@@ -3124,6 +3124,31 @@ sources/0 = SubResource("TileSetAtlasSource_ssd5v")
 sources/1 = SubResource("TileSetAtlasSource_falk3")
 sources/2 = SubResource("TileSetAtlasSource_ndlqr")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c6mck"]
+b = Vector2(544, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_46ff5"]
+b = Vector2(0, 546)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_t3yfc"]
+b = Vector2(193, -8.436298e-06)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jgdm3"]
+b = Vector2(1.3297073e-05, 239)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y3ycc"]
+a = Vector2(-1, 211)
+b = Vector2(0, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yejwg"]
+a = Vector2(452, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ummet"]
+a = Vector2(0, 235)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xw84x"]
+b = Vector2(451, 0)
+
 [node name="RommEmpety2" type="Node2D" unique_id=1571861729]
 
 [node name="TileSuelo" type="TileMapLayer" parent="." unique_id=1992981017]
@@ -3145,3 +3170,53 @@ tile_set = SubResource("TileSet_8lkgf")
 [node name="TileStruct" type="TileMapLayer" parent="." unique_id=77733996]
 tile_map_data = PackedByteArray("AABEACIAAQAbAAQAAABEACMAAQAbAAUAAABFAB8AAQAcAAEAAABFACAAAQAcAAIAAABFACEAAQAcAAMAAABFACIAAQAcAAQAAABFACMAAQAcAAUAAABGAB8AAQAdAAEAAABGACAAAQAdAAIAAABGACEAAQAdAAMAAABGACIAAQAdAAQAAABGACMAAQAdAAUAAABHACEAAQAeAAMAAABHACIAAQAeAAQAAABHACMAAQAeAAUAAAADAAMAAgAQAAwAAAADAAQAAgAQAA0AAAAEAAMAAgARAAwAAAAEAAQAAgARAA0AAAAOAAMAAgAQAAwAAAAOAAQAAgAQAA0AAAAPAAMAAgARAAwAAAAPAAQAAgARAA0AAAA=")
 tile_set = SubResource("TileSet_8netp")
+
+[node name="CollisionN" type="StaticBody2D" parent="." unique_id=1283964649]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionN" unique_id=860512171]
+shape = SubResource("SegmentShape2D_c6mck")
+
+[node name="CollisionS" type="StaticBody2D" parent="." unique_id=1878336694]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionS" unique_id=2141857505]
+position = Vector2(0, 720)
+rotation = 4.712389
+shape = SubResource("SegmentShape2D_46ff5")
+
+[node name="CollisionW" type="StaticBody2D" parent="." unique_id=2102680281]
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionW" unique_id=286521572]
+shape = SubResource("SegmentShape2D_t3yfc")
+
+[node name="CollisionW2" type="StaticBody2D" parent="." unique_id=1735992246]
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionW2" unique_id=2059724792]
+position = Vector2(480, -2.0981464e-05)
+rotation = 4.712389
+shape = SubResource("SegmentShape2D_jgdm3")
+
+[node name="CollisiionE" type="StaticBody2D" parent="." unique_id=125209792]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisiionE" unique_id=646127949]
+position = Vector2(1281, -1)
+shape = SubResource("SegmentShape2D_y3ycc")
+
+[node name="CollisionN2" type="StaticBody2D" parent="." unique_id=1351461737]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionN2" unique_id=385624342]
+position = Vector2(829, -10)
+shape = SubResource("SegmentShape2D_yejwg")
+
+[node name="CollisionE2" type="StaticBody2D" parent="." unique_id=1975182254]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionE2" unique_id=248330579]
+position = Vector2(1280, 485)
+shape = SubResource("SegmentShape2D_ummet")
+
+[node name="CollisionS2" type="StaticBody2D" parent="." unique_id=191068596]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionS2" unique_id=937379583]
+position = Vector2(830, 720)
+shape = SubResource("SegmentShape2D_xw84x")
