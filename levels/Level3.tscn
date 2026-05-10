@@ -31,9 +31,19 @@ scenes/12/scene = ExtResource("4_ws61b")
 [sub_resource type="TileSet" id="TileSet_s7kpb"]
 sources/0 = SubResource("TileSetScenesCollectionSource_u4y3f")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uog4x"]
+a = Vector2(-1, 168)
+b = Vector2(-1, 10)
+
 [node name="Level3" type="Node2D" unique_id=1641898302]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901838211]
 position = Vector2(-8, -8)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAACABQAAAAAAAAAAAACQCfAAAAAAAAAAAABwBQAC0AAAAAAAAABgCfAC0AAAAAAAAACwBQANb/AAAAAAAADACgANb/AAAAAAAACADvANb/AAAAAAAABQA+Adb/AAAAAAAABADvAAMAAAAAAAAAAwDvAKn/AAAAAAAACgDvAID/AAAAAAAACQDvAFT/AAAAAAAAAgCfAID/AAAAAAAAAQA+AYD/AAAAAAAABAA=")
 tile_set = SubResource("TileSet_s7kpb")
+
+[node name="DoorBlock" type="StaticBody2D" parent="." unique_id=774008386]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorBlock" unique_id=366080201]
+position = Vector2(33, 276)
+shape = SubResource("SegmentShape2D_uog4x")
