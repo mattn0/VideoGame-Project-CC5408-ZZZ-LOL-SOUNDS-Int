@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b2c1f8enftlp4"]
+
+[ext_resource type="Script" uid="uid://4vhr86pdeba" path="res://levels/AreaChanges/RoomChangeE.gd" id="1_kbar2"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_a2ye1"]
+b = Vector2(0, 17.999998)
+
+[node name="RoomChangeArea" type="Node2D" unique_id=1182548742]
+
+[node name="RoomChange" type="Area2D" parent="." unique_id=827444919]
+script = ExtResource("1_kbar2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomChange" unique_id=681875397]
+scale = Vector2(5, 5)
+shape = SubResource("SegmentShape2D_a2ye1")
+debug_color = Color(1, 0, 0, 0.41960785)

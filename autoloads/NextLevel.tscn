@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://diipacc5ir5ma"]
+
+[ext_resource type="Script" uid="uid://diedp4wd2iygq" path="res://autoloads/next_level.gd" id="1_7g0a3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7g0a3"]
+radius = 5.3999996
+
+[node name="NextLevel" type="Area2D" unique_id=720976473]
+script = ExtResource("1_7g0a3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1180992115]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_7g0a3")
+debug_color = Color(1, 1, 1, 0.41960785)
