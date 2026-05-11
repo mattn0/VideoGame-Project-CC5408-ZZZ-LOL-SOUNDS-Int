@@ -15,6 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://d03ne8bgwps5v" path="res://levels/AssetsScenes/Cemetery/Texture/Extra/TX Props with Shadow.png" id="13_jscuo"]
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="14_m7q71"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="15_e48gy"]
+[ext_resource type="PackedScene" uid="uid://buuko6vt0qi76" path="res://characters (players_enemys)/player.tscn" id="17_pb71r"]
+[ext_resource type="PackedScene" uid="uid://bytnr38guhsr4" path="res://characters (players_enemys)/enemy.tscn" id="18_gwanj"]
+[ext_resource type="PackedScene" uid="uid://b28mfnbbqlmrl" path="res://characters (players_enemys)/mushroom_point.tscn" id="19_nn1ti"]
+[ext_resource type="PackedScene" uid="uid://boqm81emqxnc4" path="res://ui/pause_menu.tscn" id="20_nn1ti"]
+[ext_resource type="PackedScene" uid="uid://c4yytwvjegoff" path="res://characters (players_enemys)/boss.tscn" id="21_jnmpp"]
+[ext_resource type="PackedScene" uid="uid://0lmpe62fwxuq" path="res://hud.tscn" id="21_vfe3a"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_fmwlo"]
 resource_name = "Level2"
@@ -1710,3 +1716,31 @@ tile_set = SubResource("TileSet_02jqn")
 [node name="TileStruct" type="TileMapLayer" parent="." unique_id=942584452]
 tile_map_data = PackedByteArray("AAD5AAcAAgAUABAAAAD5AAgAAgAUABEAAAD6AAcAAgAVABAAAAD6AAgAAgAVABEAAAD8AAwAAgAUABAAAAD8AA0AAgAUABEAAAD9AAwAAgAVABAAAAD9AA0AAgAVABEAAAD5AA4AAgAUABAAAAD5AA8AAgAUABEAAAD6AA4AAgAVABAAAAD6AA8AAgAVABEAAADyAA4AAgAUABAAAADyAA8AAgAUABEAAADzAA4AAgAVABAAAADzAA8AAgAVABEAAADxAAcAAgAUABAAAADxAAgAAgAUABEAAADyAAcAAgAVABAAAADyAAgAAgAVABEAAAD1AA4AAgAUABAAAAD1AA8AAgAUABEAAAD2AA4AAgAVABAAAAD2AA8AAgAVABEAAAA=")
 tile_set = SubResource("TileSet_pprct")
+
+[node name="enemy" parent="." unique_id=721203139 instance=ExtResource("18_gwanj")]
+position = Vector2(1403, 1030)
+
+[node name="enemy2" parent="." unique_id=583012704 instance=ExtResource("18_gwanj")]
+position = Vector2(1531, 1026)
+
+[node name="mushroom_point" parent="." unique_id=1540310177 instance=ExtResource("19_nn1ti")]
+position = Vector2(1378, 855)
+
+[node name="mushroom_point2" parent="." unique_id=2028933813 instance=ExtResource("19_nn1ti")]
+position = Vector2(1460, 866)
+
+[node name="player" parent="." unique_id=1788912813 instance=ExtResource("17_pb71r")]
+position = Vector2(1611, 1088)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1297539520]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1592950773 instance=ExtResource("20_nn1ti")]
+visible = false
+offset_top = 2.0
+offset_bottom = 2.0
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." unique_id=2088576928 instance=ExtResource("21_vfe3a")]
+
+[node name="Boss" parent="." unique_id=703476347 instance=ExtResource("21_jnmpp")]
+position = Vector2(2076, 1025)

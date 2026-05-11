@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ShieldAbility" format=3 uid="uid://76hhmhfv2ppv"]
+
+[ext_resource type="Script" uid="uid://ou5paxbt1fix" path="res://abilities/shield_ability.gd" id="1_pdm6c"]
+
+[resource]
+script = ExtResource("1_pdm6c")
+ability_name = "Shield_ability"
+display_name = "Shield_ability"
+metadata/_custom_type_script = "uid://ou5paxbt1fix"

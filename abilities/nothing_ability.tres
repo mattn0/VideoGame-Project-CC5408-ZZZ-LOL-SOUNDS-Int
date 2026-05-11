@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NothingAbility" format=3 uid="uid://b1cb70h0evwjs"]
+
+[ext_resource type="Script" uid="uid://cd6und5nyhjrd" path="res://abilities/nothing_ability.gd" id="1_a0dfo"]
+
+[resource]
+script = ExtResource("1_a0dfo")
+ability_name = "Nothing_ability"
+display_name = "Nothing_ability"
+metadata/_custom_type_script = "uid://cd6und5nyhjrd"

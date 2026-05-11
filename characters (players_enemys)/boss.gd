@@ -1,7 +1,7 @@
-class_name Enemie
+class_name Boss
 extends CharacterBody2D
 
-@export var speed = 50
+@export var speed = 100
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Pivot/Sprite2D
 @onready var animation_tree: AnimationTree = $AnimationTree
@@ -22,21 +22,21 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 
-	#var direction = Vector2.ZERO
+	var direction = Vector2.ZERO
 
 	#direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	#direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
-	#if direction != Vector2.ZERO:
-	#	direction = direction.normalized()
-	#	velocity = direction * speed
-	#	playback.travel("walk")
+	if direction != Vector2.ZERO:
+		direction = direction.normalized()
+		velocity = direction * speed
+		playback.travel("walk")
 
-	#	if direction.x != 0:
-	#		sprite_2d.flip_h = direction.x < 0
-	#else:
-	#	velocity = Vector2.ZERO
-	#	playback.travel("idle")
+		if direction.x != 0:
+			sprite_2d.flip_h = direction.x > 0
+	else:
+		velocity = Vector2.ZERO
+		playback.travel("idle")
 		
 	knockback = lerp(knockback, Vector2.ZERO, 0.1)	
 		
@@ -44,13 +44,6 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
-	var min_x = 38   # Borde izquierdo
-	var max_x = 1120  # Borde derecho
-	var min_y = 2	# Borde superior
-	var max_y = 602  # Borde inferior
-	
-	global_position.x = clamp(global_position.x, min_x, max_x)
-	global_position.y = clamp(global_position.y, min_y, max_y)
 
 func take_damage(value: int, badguy: Node2D) -> void:
 	#Debug.log("%s received %d damage" % [name, value])	
@@ -67,3 +60,5 @@ func take_damage(value: int, badguy: Node2D) -> void:
 	
 func _on_damage_dealt() -> void:
 	pass 
+	
+	
