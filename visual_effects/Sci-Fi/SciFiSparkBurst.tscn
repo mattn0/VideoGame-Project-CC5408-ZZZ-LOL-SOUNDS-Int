@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b7ah14diyunae"]
+
+[ext_resource type="Texture2D" uid="uid://x6ygqvkcvk4d" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Sci-fi/scifi_spark_burst_001/scifi_spark_burst_001_large_yellow/spritesheet.png" id="1_6qxvu"]
+
+[sub_resource type="Animation" id="Animation_bw6cr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_h3lwt"]
+resource_name = "SciFiSparkBurst"
+length = 0.36666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668, 0.3, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byrf8"]
+_data = {
+&"RESET": SubResource("Animation_bw6cr"),
+&"SciFiSparkBurst": SubResource("Animation_h3lwt")
+}
+
+[node name="SciFiSparkBurst" type="Node2D" unique_id=812918955]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=709126451]
+texture = ExtResource("1_6qxvu")
+hframes = 12
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1231517629]
+libraries/ = SubResource("AnimationLibrary_byrf8")

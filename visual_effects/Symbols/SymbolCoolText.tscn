@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://1xxvj6ejsfan"]
+
+[ext_resource type="Texture2D" uid="uid://s0innboy0s5v" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0000.png" id="1_pkvim"]
+[ext_resource type="Texture2D" uid="uid://d0crt5xlyjamn" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0001.png" id="2_x6npk"]
+[ext_resource type="Texture2D" uid="uid://cbmonkmd7aduf" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0002.png" id="3_ju8af"]
+[ext_resource type="Texture2D" uid="uid://1kbex5yi7hsm" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0003.png" id="4_at3gl"]
+[ext_resource type="Texture2D" uid="uid://br244qklekubf" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0004.png" id="5_7ooj6"]
+[ext_resource type="Texture2D" uid="uid://bh1ksofo727i4" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0005.png" id="6_oy0uh"]
+[ext_resource type="Texture2D" uid="uid://d2bmvot6rihhg" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0006.png" id="7_nxr3s"]
+[ext_resource type="Texture2D" uid="uid://yie0bqmny20c" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0007.png" id="8_sissd"]
+[ext_resource type="Texture2D" uid="uid://8hvw2mwdwp0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0008.png" id="9_5oxv2"]
+[ext_resource type="Texture2D" uid="uid://b7b174i60x273" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0009.png" id="10_xiigq"]
+[ext_resource type="Texture2D" uid="uid://4rbknwjajee" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0010.png" id="11_0j51v"]
+[ext_resource type="Texture2D" uid="uid://b7nx4xs81hpas" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0011.png" id="12_ktjff"]
+[ext_resource type="Texture2D" uid="uid://5qcr43oysnap" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0012.png" id="13_kvk84"]
+[ext_resource type="Texture2D" uid="uid://c0ng2q7xawwm3" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0013.png" id="14_vjir4"]
+[ext_resource type="Texture2D" uid="uid://v75ax00m5a25" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0014.png" id="15_y5p08"]
+[ext_resource type="Texture2D" uid="uid://b06c1sgw3c2n5" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0015.png" id="16_ty2p8"]
+[ext_resource type="Texture2D" uid="uid://b41ga2njxpylt" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0016.png" id="17_3e4fr"]
+[ext_resource type="Texture2D" uid="uid://bdye3j4vn276y" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0017.png" id="18_7megu"]
+[ext_resource type="Texture2D" uid="uid://iyf57mi56r8h" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0018.png" id="19_elpp4"]
+[ext_resource type="Texture2D" uid="uid://dqvwklc3p5pip" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0019.png" id="20_6j5t7"]
+[ext_resource type="Texture2D" uid="uid://4o68khxsvt3" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0020.png" id="21_2u0nq"]
+[ext_resource type="Texture2D" uid="uid://bisy4jp7p1l36" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0021.png" id="22_xjk7g"]
+[ext_resource type="Texture2D" uid="uid://c1388o162hlvo" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0022.png" id="23_j8dtt"]
+[ext_resource type="Texture2D" uid="uid://ctxweeq044lu8" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0023.png" id="24_u0sbv"]
+[ext_resource type="Texture2D" uid="uid://bfp50ar7lwk3u" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0024.png" id="25_j0kth"]
+[ext_resource type="Texture2D" uid="uid://x3cuahb2wd38" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0025.png" id="26_yo2w3"]
+[ext_resource type="Texture2D" uid="uid://iprx7y3xcng0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0026.png" id="27_fhmmk"]
+[ext_resource type="Texture2D" uid="uid://cnuk7ncm65f13" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0027.png" id="28_0vrnl"]
+[ext_resource type="Texture2D" uid="uid://c147pgq1ih4is" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0028.png" id="29_li7pn"]
+[ext_resource type="Texture2D" uid="uid://bexq4g82acue1" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0029.png" id="30_sxvks"]
+[ext_resource type="Texture2D" uid="uid://b277p225puto1" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0030.png" id="31_uqpqc"]
+[ext_resource type="Texture2D" uid="uid://dnolbe6243vrt" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0031.png" id="32_p103f"]
+[ext_resource type="Texture2D" uid="uid://cgxgt2p047f7o" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0032.png" id="33_uwaol"]
+[ext_resource type="Texture2D" uid="uid://dqa3ciijbqkw4" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0033.png" id="34_ewn0y"]
+[ext_resource type="Texture2D" uid="uid://dvjkn6erybcos" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0034.png" id="35_x6d8j"]
+[ext_resource type="Texture2D" uid="uid://c5l62p8wa2acv" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_cool_text_001/symbol_cool_text_001_large_blue/frame0035.png" id="36_dgmct"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypyot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pkvim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x6npk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ju8af")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_at3gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ooj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oy0uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nxr3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sissd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5oxv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xiigq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0j51v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ktjff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kvk84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vjir4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_y5p08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ty2p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3e4fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7megu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_elpp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6j5t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2u0nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xjk7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_j8dtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u0sbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j0kth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yo2w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fhmmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0vrnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_li7pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sxvks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_uqpqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p103f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_uwaol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ewn0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_x6d8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_dgmct")
+}],
+"loop": true,
+"name": &"SymbolCoolText",
+"speed": 45.0
+}]
+
+[node name="SymbolCoolText" type="Node2D" unique_id=1050114102]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=251373373]
+sprite_frames = SubResource("SpriteFrames_ypyot")
+animation = &"SymbolCoolText"
+frame_progress = 0.22629508

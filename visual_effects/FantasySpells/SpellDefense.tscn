@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ca3g07s3h2qy"]
+
+[ext_resource type="Texture2D" uid="uid://br07hs3h6sewl" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Fantasy Spells/spell_defense_up_001/spell_defense_up_001_large_blue/spritesheet.png" id="1_3gawn"]
+
+[sub_resource type="Animation" id="Animation_00dhy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_guhda"]
+resource_name = "SpellDefense"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333337, 0.4666667, 0.5, 0.53333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sl5tx"]
+_data = {
+&"RESET": SubResource("Animation_00dhy"),
+&"SpellDefense": SubResource("Animation_guhda")
+}
+
+[node name="SpellDefense" type="Node2D" unique_id=181157747]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=829944339]
+libraries/ = SubResource("AnimationLibrary_sl5tx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=973101457]
+texture = ExtResource("1_3gawn")
+hframes = 18

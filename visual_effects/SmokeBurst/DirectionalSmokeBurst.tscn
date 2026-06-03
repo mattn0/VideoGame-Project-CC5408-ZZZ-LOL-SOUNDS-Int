@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b1ecrh4jaqvs3"]
+
+[ext_resource type="Texture2D" uid="uid://bqsp7pdjahp76" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Smoke Bursts/directional_smoke_burst_001/directional_smoke_burst_001_large_white/spritesheet.png" id="1_t6qcw"]
+
+[sub_resource type="Animation" id="Animation_oop0m"]
+resource_name = "DirectionalSmokeBurst"
+length = 0.6666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333337, 0.4666667, 0.5, 0.53333336, 0.5666667, 0.6, 0.6333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+}
+
+[sub_resource type="Animation" id="Animation_uqwux"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l2pse"]
+_data = {
+&"DirectionalSmokeBurst": SubResource("Animation_oop0m"),
+&"RESET": SubResource("Animation_uqwux")
+}
+
+[node name="DirectionalSmokeBurst" type="Node2D" unique_id=1285989127]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1353432192]
+texture = ExtResource("1_t6qcw")
+hframes = 21
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=703773922]
+libraries/ = SubResource("AnimationLibrary_l2pse")

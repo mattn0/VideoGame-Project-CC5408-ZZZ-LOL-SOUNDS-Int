@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-@export var speed = 150
+@export var speed = 300
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var death_sound: AudioStreamPlayer = $DeathSound
@@ -33,14 +33,15 @@ var room_y = 0
 func _ready() -> void:
 	animation_player.play("idle")
 	if camara:
-		#camara.set_as_top_level(true)
-		camara.zoom = Vector2(2, 2)
+		camara.set_as_top_level(true)
+		#camara.zoom = Vector2(2, 2)
 
 		# Limites de cámara
-		#camara.limit_left = room_x
-		#camara.limit_top = room_y
-		#camara.limit_right = room_x + room_width
-		#camara.limit_bottom = room_y + room_height
+		camara.limit_left = room_x
+		camara.limit_top = room_y
+		camara.limit_right = room_x + room_width
+		camara.limit_bottom = room_y + room_height
+		
 	_setup_roulette()
 	roulette_ui.roulette_manager = roulette_manager
 	
@@ -129,28 +130,28 @@ func take_point(value: int) -> void:
 	
 var can_change_room: bool = true
 
-#func change_room(offset_x: float, offset_y: float):
-	#if not can_change_room:
-	#	return
-	
+func change_room(offset_x: float, offset_y: float):
+	if not can_change_room:
+		return
+
 	# Bloqueamos futuros cambios
-	#can_change_room = false
+	can_change_room = false
 	# Sumamos a la posición actual de la sala
-	#room_x += offset_x
-	#room_y += offset_y
+	room_x += offset_x
+	room_y += offset_y
 
-	#if camara:
-		# Actualizamos límites
-	#	camara.limit_left = room_x
-	#	camara.limit_top = room_y
-	#	camara.limit_right = room_x + room_width
-	#	camara.limit_bottom = room_y + room_height
+	if camara:
+	# Actualizamos límites
+		camara.limit_left = room_x
+		camara.limit_top = room_y
+		camara.limit_right = room_x + room_width
+		camara.limit_bottom = room_y + room_height
 
-		# Centramos la cámara en la nueva sala
-		#camara.global_position = Vector2(
-		#	room_x + room_width / 2,
-		#	room_y + room_height / 2
-		#)
-		#await get_tree().create_timer(0.5).timeout
-		#can_change_room = true
-		#print(camara.global_position)
+	# Centramos la cámara en la nueva sala
+		camara.global_position = Vector2(
+			room_x + room_width / 2,
+			room_y + room_height / 2
+		)
+		await get_tree().create_timer(0.5).timeout
+		can_change_room = true
+		print(camara.global_position)

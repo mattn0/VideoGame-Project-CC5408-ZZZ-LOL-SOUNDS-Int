@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d03ne8bgwps5v" path="res://levels/AssetsScenes/Cemetery/Texture/Extra/TX Props with Shadow.png" id="2_m7fgx"]
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="3_ry3la"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="4_sarle"]
+[ext_resource type="PackedScene" uid="uid://b2c1f8enftlp4" path="res://levels/AreaChanges/RoomChangeAreaE.tscn" id="5_ry3la"]
+[ext_resource type="PackedScene" uid="uid://w1ucko70wyfg" path="res://levels/AreaChanges/RoomChangeAreaN.tscn" id="6_sarle"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n66i8"]
 texture = ExtResource("1_uv5un")
@@ -1956,3 +1958,11 @@ tile_set = SubResource("TileSet_ru4r7")
 [node name="TileDungeonObject" type="TileMapLayer" parent="." unique_id=1084902062]
 tile_map_data = PackedByteArray("AAAIABMAAAAIAAYAAAAMAAwAAAAIAAYAAAAUAB0AAAAIAAYAAAAVAAoAAAAIAAYAAAAWAAsAAAAIAAYAAAAWABQAAAAIAAYAAAAXABsAAAAIAAYAAAAZAA4AAAAIAAYAAAAaABsAAAAIAAYAAAAbABcAAAAIAAYAAAAeABAAAAAIAAYAAAAgACEAAAAIAAYAAAAoAB8AAAAIAAYAAAAzAA0AAAAIAAYAAAA2ABUAAAAIAAYAAAA4AAsAAAAIAAYAAAA7AAwAAAAIAAYAAAA9ABQAAAAIAAYAAAA/ACQAAAAIAAYAAABDAAoAAAAIAAYAAABDABkAAAAIAAYAAAAOAAoAAAAHAAcAAAARABIAAAAHAAcAAAAYACQAAAAHAAcAAAAaABUAAAAHAAcAAAAcABIAAAAHAAcAAAAdABIAAAAHAAcAAAAeACMAAAAHAAcAAAAgABEAAAAHAAcAAAAgABUAAAAHAAcAAAAiACEAAAAHAAcAAAAlAAoAAAAHAAcAAAAlABQAAAAHAAcAAAA5ABEAAAAHAAcAAABCACAAAAAHAAcAAAAkAAgAAAAAAAkAAAAyAAgAAAAAAAkAAABHABsAAAABAAkAABBHABIAAAABAAkAABAQABkAAAAAAAkAAAALABkAAAAAAAkAAAARAAgAAAAEAAcAAAAeAAgAAAAEAAcAAAA/AAgAAAAEAAcAAABDAAgAAAAEAAcAAAA=")
 tile_set = SubResource("TileSet_fey55")
+
+[node name="RoomChangeArea" parent="." unique_id=1182548742 instance=ExtResource("5_ry3la")]
+position = Vector2(1271, 278)
+scale = Vector2(1, 2)
+
+[node name="RoomChangeSceneN" parent="." unique_id=1084105850 instance=ExtResource("6_sarle")]
+position = Vector2(576, 14)
+scale = Vector2(2, 1)

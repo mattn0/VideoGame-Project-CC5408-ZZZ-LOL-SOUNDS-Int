@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d03ne8bgwps5v" path="res://levels/AssetsScenes/Cemetery/Texture/Extra/TX Props with Shadow.png" id="7_jx2n7"]
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="8_0nns6"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="9_1247q"]
+[ext_resource type="PackedScene" uid="uid://b2c1f8enftlp4" path="res://levels/AreaChanges/RoomChangeAreaE.tscn" id="9_jbdsx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x571x"]
 texture = ExtResource("2_cs73j")
@@ -3117,3 +3118,7 @@ shape = SubResource("SegmentShape2D_e7lja")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionE2" unique_id=901377941]
 position = Vector2(1280, 485)
 shape = SubResource("SegmentShape2D_masvu")
+
+[node name="RoomChangeArea" parent="." unique_id=1182548742 instance=ExtResource("9_jbdsx")]
+position = Vector2(1270, 262)
+scale = Vector2(1, 2)

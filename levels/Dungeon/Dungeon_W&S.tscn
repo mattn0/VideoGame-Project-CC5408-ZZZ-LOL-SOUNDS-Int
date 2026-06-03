@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d03ne8bgwps5v" path="res://levels/AssetsScenes/Cemetery/Texture/Extra/TX Props with Shadow.png" id="2_ygv8i"]
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="3_rwvss"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="4_wd2xn"]
+[ext_resource type="PackedScene" uid="uid://bt2afrlntpnq1" path="res://levels/AreaChanges/RoomChangeAreaS.tscn" id="5_igagc"]
+[ext_resource type="PackedScene" uid="uid://ct7q5bvgritl0" path="res://levels/AreaChanges/RoomChangeAreaW.tscn" id="6_ao55u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5g3v4"]
 texture = ExtResource("1_ex462")
@@ -1957,3 +1959,11 @@ tile_set = SubResource("TileSet_xijw6")
 [node name="TileDungeonObject" type="TileMapLayer" parent="." unique_id=245024530]
 tile_map_data = PackedByteArray("AAAPABIAAAAHAAcAAAAPAB4AAAAHAAcAAAASAB8AAAAHAAcAAAAWABMAAAAHAAcAAAAbACIAAAAHAAcAAAAcAAwAAAAHAAcAAAAdAAsAAAAHAAcAAAAeABkAAAAHAAcAAAAiAA4AAAAHAAcAAAAjAA4AAAAHAAcAAAAlABoAAAAHAAcAAAAtAB0AAAAHAAcAAAAvABsAAAAHAAcAAAAxAA4AAAAHAAcAAAA3AA0AAAAHAAcAAAA5AAkAAAAHAAcAAABDAAkAAAAHAAcAAABEABQAAAAHAAcAAABGAAkAAAAHAAcAAABGABEAAAAHAAcAAAAJACQAAAAIAAYAAAAKAAkAAAAIAAYAAAANABgAAAAIAAYAAAAXAA4AAAAIAAYAAAAZABEAAAAIAAYAAAAgABYAAAAIAAYAAAAkAAsAAAAIAAYAAAAmAA0AAAAIAAYAAAAqAAoAAAAIAAYAAAAqACAAAAAIAAYAAAAsABEAAAAIAAYAAAA4ACMAAAAIAAYAAAA7AA0AAAAIAAYAAABAABgAAAAIAAYAAABAACEAAAAIAAYAAABEAB0AAAAIAAYAAAA9ABwAAAAAAAkAAAA4ABwAAAAAAAkAAAAIAAgAAAAAAAkAAABHAAgAAAAAAAkAAAAkAAgAAAAAAAkAAAAyAAgAAAAAAAkAAABHABsAAAABAAkAABBHABEAAAABAAkAABAlACUAAAABAAkAAAAxACUAAAABAAkAABAbAAsAAAAAAAkAAAAOAAsAAAAAAAkAAAAIABEAAAABAAkAAAAIABwAAAABAAkAAAA=")
 tile_set = SubResource("TileSet_b6xhd")
+
+[node name="RoomChangeAreaS" parent="." unique_id=876693409 instance=ExtResource("5_igagc")]
+position = Vector2(575, 707)
+scale = Vector2(2, 1)
+
+[node name="RoomChangeAreaW" parent="." unique_id=104616805 instance=ExtResource("6_ao55u")]
+position = Vector2(10, 284)
+scale = Vector2(1, 2)

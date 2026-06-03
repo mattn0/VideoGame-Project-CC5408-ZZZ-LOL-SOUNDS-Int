@@ -19,6 +19,7 @@ config/icon="res://resources/icon.svg"
 
 Debug="*uid://cfrnxf12mx25b"
 Game="*uid://besdybpt115qs"
+LevelManager="*uid://c5iwxgveer78m"
 
 [display]
 
@@ -81,4 +82,5 @@ attack={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

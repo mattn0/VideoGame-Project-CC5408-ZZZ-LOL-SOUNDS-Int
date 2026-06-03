@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c3oyw4c1a25iy" path="res://levels/Dungeon/Dungeon_W&S.tscn" id="10_en7ln"]
 [ext_resource type="PackedScene" uid="uid://bkfeydjd6mh5d" path="res://levels/Dungeon/Dungeon_E&W.tscn" id="11_5nt5t"]
 [ext_resource type="PackedScene" uid="uid://d3hdsscmib1r" path="res://levels/Dungeon/Dungeon_N&S&E&W.tscn" id="12_4axbk"]
+[ext_resource type="PackedScene" uid="uid://buuko6vt0qi76" path="res://characters (players_enemys)/player.tscn" id="13_fqqs4"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u4y3f"]
 resource_name = "CemetaryRomms"
@@ -39,7 +40,7 @@ b = Vector2(-1, 10)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901838211]
 position = Vector2(-8, -8)
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAACABQAAAAAAAAAAAACQCfAAAAAAAAAAAABwBQAC0AAAAAAAAABgCfAC0AAAAAAAAACwBQANb/AAAAAAAADACgANb/AAAAAAAACADvANb/AAAAAAAABQA+Adb/AAAAAAAABADvAAMAAAAAAAAAAwDvAKn/AAAAAAAACgDvAID/AAAAAAAACQDvAFT/AAAAAAAAAgCfAID/AAAAAAAAAQA+AYD/AAAAAAAABAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAACABQAAAAAAAAAAAACQBQAC0AAAAAAAAABgCgAC0AAAAAAAAACwBQANP/AAAAAAAADACgANP/AAAAAAAACACgAAAAAAAAAAAABwDwANP/AAAAAAAACQDwAAAAAAAAAAAAAwBAAdP/AAAAAAAABADwAKb/AAAAAAAACgDwAHn/AAAAAAAACQDwAEz/AAAAAAAAAgCgAHn/AAAAAAAAAQBAAXn/AAAAAAAABAA=")
 tile_set = SubResource("TileSet_s7kpb")
 
 [node name="DoorBlock" type="StaticBody2D" parent="." unique_id=774008386]
@@ -47,3 +48,6 @@ tile_set = SubResource("TileSet_s7kpb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorBlock" unique_id=366080201]
 position = Vector2(33, 276)
 shape = SubResource("SegmentShape2D_uog4x")
+
+[node name="player" parent="." unique_id=1788912813 instance=ExtResource("13_fqqs4")]
+position = Vector2(98, 368)

@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d03ne8bgwps5v" path="res://levels/AssetsScenes/Cemetery/Texture/Extra/TX Props with Shadow.png" id="2_w6k8x"]
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="3_0623r"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="4_4rkak"]
+[ext_resource type="PackedScene" uid="uid://w1ucko70wyfg" path="res://levels/AreaChanges/RoomChangeAreaN.tscn" id="5_0623r"]
+[ext_resource type="PackedScene" uid="uid://bt2afrlntpnq1" path="res://levels/AreaChanges/RoomChangeAreaS.tscn" id="6_4rkak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i05cn"]
 texture = ExtResource("1_2ifm4")
@@ -1959,3 +1961,11 @@ tile_set = SubResource("TileSet_vpli5")
 [node name="TileDungeonObject" type="TileMapLayer" parent="." unique_id=1726454618]
 tile_map_data = PackedByteArray("AAAlAAcAAAABAAkAAAAxAAcAAAABAAkAABAxACYAAAABAAkAABAlACYAAAABAAkAAABHAAgAAAAAAAkAAAAyAAgAAAAAAAkAAAAkAAgAAAAAAAkAAAAIAAgAAAAAAAkAAAAIACQAAAAAAAkAAABHACQAAAAAAAkAAAAKABMAAAAHAAcAAAANAAsAAAAHAAcAAAANABYAAAAHAAcAAAAOAAwAAAAHAAcAAAAOACEAAAAHAAcAAAAQABoAAAAHAAcAAAARABUAAAAHAAcAAAAVABAAAAAHAAcAAAAbABgAAAAHAAcAAAAfAB0AAAAHAAcAAAAmABUAAAAHAAcAAAAtABYAAAAHAAcAAAAwACQAAAAHAAcAAAAzABcAAAAHAAcAAABAAA8AAAAHAAcAAAAKAB8AAAAIAAYAAAAMAA0AAAAIAAYAAAARABsAAAAIAAYAAAASACMAAAAIAAYAAAAbABYAAAAIAAYAAAAfAB4AAAAIAAYAAAAfACMAAAAIAAYAAAAgABgAAAAIAAYAAAAoAAsAAAAIAAYAAAAoABkAAAAIAAYAAAApABAAAAAIAAYAAAAwABAAAAAIAAYAAAA3AAwAAAAIAAYAAAA/ACIAAAAIAAYAAABGABUAAAAAAAkAAABBABUAAAAAAAkAAAA1AAgAAAAEAAcAAAA5AAgAAAAEAAcAAAA9AAgAAAAEAAcAAABBAAgAAAAEAAcAAABFAAgAAAAEAAcAAAA=")
 tile_set = SubResource("TileSet_2gc0a")
+
+[node name="RoomChangeSceneN" parent="." unique_id=1084105850 instance=ExtResource("5_0623r")]
+position = Vector2(576, 14)
+scale = Vector2(2, 1)
+
+[node name="RoomChangeAreaS" parent="." unique_id=876693409 instance=ExtResource("6_4rkak")]
+position = Vector2(575, 707)
+scale = Vector2(2, 1)

@@ -8,4 +8,6 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	var player: Player = body as Player
 	if player:
+		Debug.log("HOLA")
+		Debug.log(LevelManager.current_level)
 		LevelManager.next_level()

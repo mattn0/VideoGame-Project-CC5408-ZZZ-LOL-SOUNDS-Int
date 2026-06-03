@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://d03ne8bgwps5v" path="res://levels/AssetsScenes/Cemetery/Texture/Extra/TX Props with Shadow.png" id="2_h057w"]
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="3_fipn3"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="4_p0l65"]
+[ext_resource type="PackedScene" uid="uid://b2c1f8enftlp4" path="res://levels/AreaChanges/RoomChangeAreaE.tscn" id="5_eda7c"]
+[ext_resource type="PackedScene" uid="uid://w1ucko70wyfg" path="res://levels/AreaChanges/RoomChangeAreaN.tscn" id="6_gkabw"]
+[ext_resource type="PackedScene" uid="uid://bt2afrlntpnq1" path="res://levels/AreaChanges/RoomChangeAreaS.tscn" id="7_bkbdp"]
+[ext_resource type="PackedScene" uid="uid://ct7q5bvgritl0" path="res://levels/AreaChanges/RoomChangeAreaW.tscn" id="8_xhw6x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo7pe"]
 texture = ExtResource("1_wo7pe")
@@ -1956,3 +1960,19 @@ tile_set = SubResource("TileSet_tg0br")
 [node name="TileDungeonObject" type="TileMapLayer" parent="." unique_id=1459774796]
 tile_map_data = PackedByteArray("AAAIABEAAAABAAkAAAAIABsAAAABAAkAAABHABsAAAABAAkAABBHABEAAAABAAkAABAkAAgAAAAAAAkAAAAyAAgAAAAAAAkAAAAlACUAAAABAAkAAAAxACUAAAABAAkAABA0AA8AAAADAAkAAAA7AA8AAAADAAkAAAA7ABQAAAAIAAYAAAA0ABQAAAADAAkAAABFAB8AAAAHAAcAAABFACAAAAAHAAcAAABGACAAAAAHAAcAAAAQABwAAAAHAAcAAAAWABQAAAAHAAcAAAAiABYAAAAHAAcAAAArAAsAAAAHAAcAAAAfACMAAAAHAAcAAAAcABAAAAAHAAcAAAAbAAgAAAAEAAcAAAAaAAgAAAAEAAcAAAAYAAgAAAAEAAcAAAAZAAgAAAAEAAcAAAALABQAAAAIAAYAAAAMABoAAAAIAAYAAAASABYAAAAIAAYAAAAdACIAAAAIAAYAAAAkABgAAAAIAAYAAAAmACEAAAAIAAYAAAAnABoAAAAIAAYAAAAsABIAAAAIAAYAAAA0AAoAAAAIAAYAAAA1ABQAAAAIAAYAAAA1ACMAAAAIAAYAAAA2ABYAAAAIAAYAAAA6AAsAAAAIAAYAAAA6ABcAAAAIAAYAAAA8ACMAAAAIAAYAAAA9ACEAAAAIAAYAAAA/ABEAAAAIAAYAAABAAA0AAAAIAAYAAABAABQAAAAIAAYAAABAABkAAAAIAAYAAABDABAAAAAIAAYAAAA6ABEAAAAAAAkAAAA1ABEAAAAAAAkAAAA=")
 tile_set = SubResource("TileSet_xhw6x")
+
+[node name="RoomChangeArea" parent="." unique_id=1182548742 instance=ExtResource("5_eda7c")]
+position = Vector2(1271, 278)
+scale = Vector2(1, 2)
+
+[node name="RoomChangeSceneN" parent="." unique_id=1084105850 instance=ExtResource("6_gkabw")]
+position = Vector2(576, 14)
+scale = Vector2(2, 1)
+
+[node name="RoomChangeAreaS" parent="." unique_id=876693409 instance=ExtResource("7_bkbdp")]
+position = Vector2(575, 707)
+scale = Vector2(2, 1)
+
+[node name="RoomChangeAreaW" parent="." unique_id=104616805 instance=ExtResource("8_xhw6x")]
+position = Vector2(10, 284)
+scale = Vector2(1, 2)

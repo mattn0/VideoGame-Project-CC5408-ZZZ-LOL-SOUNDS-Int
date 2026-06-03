@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c01bf7sdh45jx"]
+
+[ext_resource type="Texture2D" uid="uid://brisy2nxwg7xl" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Sci-fi/scifi_warp_002/scifi_warp_002_large_red/spritesheet.png" id="1_rxbvc"]
+
+[sub_resource type="Animation" id="Animation_ir7v2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_141td"]
+resource_name = "SciFiWarp2"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1elr0"]
+_data = {
+&"RESET": SubResource("Animation_ir7v2"),
+&"SciFiWarp2": SubResource("Animation_141td")
+}
+
+[node name="SciFiWarp2" type="Node2D" unique_id=1143001561]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1487538437]
+texture = ExtResource("1_rxbvc")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1170556950]
+libraries/ = SubResource("AnimationLibrary_1elr0")

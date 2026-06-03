@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ct4ymsg0avvnr"]
+
+[ext_resource type="Texture2D" uid="uid://b1kgtj5mdr3tu" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Impacts/directional_impact_002/directional_impact_002_large_white/spritesheet.png" id="1_h7ocd"]
+
+[sub_resource type="Animation" id="Animation_81ro7"]
+resource_name = "DirectionalImpact2"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_ym0v5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wrij"]
+_data = {
+&"DirectionalImpact2": SubResource("Animation_81ro7"),
+&"RESET": SubResource("Animation_ym0v5")
+}
+
+[node name="DirectionalImpact2" type="Node2D" unique_id=918336577]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=927747884]
+texture = ExtResource("1_h7ocd")
+hframes = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=333705982]
+libraries/ = SubResource("AnimationLibrary_3wrij")

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://djrx6x5qprbxq"]
+
+[ext_resource type="Texture2D" uid="uid://betwoygnq8sos" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Explosions/symmetrical_explosion_004/symmetrical_explosion_004_large_orange/spritesheet.png" id="1_hv10k"]
+
+[sub_resource type="Animation" id="Animation_fwhip"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_uv8s5"]
+resource_name = "SimetricalExplosion3"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fapsk"]
+_data = {
+&"RESET": SubResource("Animation_fwhip"),
+&"SimetricalExplosion3": SubResource("Animation_uv8s5")
+}
+
+[node name="SimmetricalExplosion3" type="Node2D" unique_id=1314966708]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1724909818]
+texture = ExtResource("1_hv10k")
+hframes = 12
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=34161978]
+root_node = NodePath("../Sprite2D")
+libraries/ = SubResource("AnimationLibrary_fapsk")
