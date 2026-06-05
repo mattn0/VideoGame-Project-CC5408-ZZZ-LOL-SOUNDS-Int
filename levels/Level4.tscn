@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c3oyw4c1a25iy" path="res://levels/Dungeon/Dungeon_W&S.tscn" id="10_xf1my"]
 [ext_resource type="PackedScene" uid="uid://bkfeydjd6mh5d" path="res://levels/Dungeon/Dungeon_E&W.tscn" id="11_flcl8"]
 [ext_resource type="PackedScene" uid="uid://d3hdsscmib1r" path="res://levels/Dungeon/Dungeon_N&S&E&W.tscn" id="12_luelv"]
+[ext_resource type="PackedScene" uid="uid://buuko6vt0qi76" path="res://characters (players_enemys)/player.tscn" id="13_6eg67"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u4y3f"]
 resource_name = "CemetaryRomms"
@@ -35,11 +36,11 @@ sources/0 = SubResource("TileSetScenesCollectionSource_u4y3f")
 a = Vector2(-1, 168)
 b = Vector2(-1, 10)
 
-[node name="Level3" type="Node2D" unique_id=1641898302]
+[node name="Level4" type="Node2D" unique_id=1641898302]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901838211]
 position = Vector2(-8, -8)
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAGABQAAAAAAAAAAAACQCfAAAAAAAAAAAABwBQAC0AAAAAAAAABgCfAC0AAAAAAAAACwBQANb/AAAAAAAAFQCgANb/AAAAAAAAFgDvANb/AAAAAAAAGQA+Adb/AAAAAAAABADvAAMAAAAAAAAAEwDvAKn/AAAAAAAACgDvAID/AAAAAAAACQDvAFT/AAAAAAAAAgCfAID/AAAAAAAAAQA+AYD/AAAAAAAABAAAANb/AAAAAAAAFACgAAMAAAAAAAAAFwCgADAAAAAAAAAAEAA/AQMAAAAAAAAAEQCgAKn/AAAAAAAAFgBQAKn/AAAAAAAAEwBQAHz/AAAAAAAAFACgAHz/AAAAAAAAGQDwAKn/AAAAAAAAEQA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAGABQAC0AAAAAAAAABgCfAC0AAAAAAAAACwA+Adb/AAAAAAAABADvAID/AAAAAAAACQDvAFT/AAAAAAAAAgA+AYD/AAAAAAAABAAAANP/AAAAAAAAFABQANP/AAAAAAAAFQCgANP/AAAAAAAAFgCgAKb/AAAAAAAAFgCgAHn/AAAAAAAAGQBQAHn/AAAAAAAAFABQAKb/AAAAAAAAEwCgAAAAAAAAAAAAFwCgAC0AAAAAAAAAEADwAKb/AAAAAAAAEQDwANP/AAAAAAAAGQDwAAAAAAAAAAAAEwBAAQAAAAAAAAAAEQA=")
 tile_set = SubResource("TileSet_s7kpb")
 
 [node name="DoorBlock" type="StaticBody2D" parent="." unique_id=774008386]
@@ -47,3 +48,6 @@ tile_set = SubResource("TileSet_s7kpb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorBlock" unique_id=366080201]
 position = Vector2(33, 276)
 shape = SubResource("SegmentShape2D_uog4x")
+
+[node name="player" parent="." unique_id=1788912813 instance=ExtResource("13_6eg67")]
+position = Vector2(71, 384)
