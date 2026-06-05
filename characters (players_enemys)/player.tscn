@@ -7,8 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://c6x1wocky255w" path="res://sounds/dragon-studio-pop-402323.mp3" id="3_i3pqv"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://i8igxsu4no4s" path="res://movement_animationtree.tres" id="4_440fc"]
 [ext_resource type="Script" uid="uid://ddu7x0vq7tgdr" path="res://components/hurtbox_component.gd" id="5_4cr1n"]
-[ext_resource type="Script" path="res://characters (players_enemys)/roulette_manager.gd" id="7_fuk28"]
-[ext_resource type="Script" path="res://characters (players_enemys)/ability_executor.gd" id="8_lpfip"]
+[ext_resource type="Script" uid="uid://bvq7g4ft1ouow" path="res://characters (players_enemys)/roulette_manager.gd" id="7_fuk28"]
+[ext_resource type="Script" uid="uid://b07pyd74e051g" path="res://characters (players_enemys)/ability_executor.gd" id="8_lpfip"]
 [ext_resource type="PackedScene" uid="uid://bxphm1ybsjn8f" path="res://roulette_resource/roulette_ui.tscn" id="9_lpfip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vivmo"]
@@ -405,6 +405,7 @@ animation = &"take_point"
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_nwm8y"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_fuk28"]
+graph_offset = Vector2(-150.01065, 161.52905)
 nodes/output/position = Vector2(1140, 120)
 nodes/movement/node = ExtResource("4_440fc")
 nodes/movement/position = Vector2(0, 180)

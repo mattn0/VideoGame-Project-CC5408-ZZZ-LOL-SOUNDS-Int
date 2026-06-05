@@ -34,6 +34,7 @@ var room_y = 0
 
 func _ready() -> void:
 	animation_player.play("idle")
+	
 	if camara:
 		camara.set_as_top_level(true)
 		#camara.zoom = Vector2(2, 2)
@@ -60,11 +61,11 @@ func _setup_roulette() -> void:
 		return sd
 	
 	roulette_manager.configure_slot(0, make_slot.call(attack, 0))
-	roulette_manager.configure_slot(1, make_slot.call(attack, 1))
+	roulette_manager.configure_slot(1, make_slot.call(shield, 1))
 	roulette_manager.configure_slot(2, make_slot.call(attack, 2))
-	roulette_manager.configure_slot(3, make_slot.call(shield, 3))
+	roulette_manager.configure_slot(3, make_slot.call(attack, 3))
 	roulette_manager.configure_slot(4, make_slot.call(shield, 4))
-	roulette_manager.configure_slot(5, make_slot.call(nothing, 5))
+	roulette_manager.configure_slot(5, make_slot.call(attack, 5))
 	roulette_manager.configure_slot(6, make_slot.call(nothing, 6))
 	roulette_manager.configure_slot(7, make_slot.call(nothing, 7))
 	roulette_manager.configure_slot(8, make_slot.call(shield, 8))
@@ -101,13 +102,15 @@ func _trigger_attack() -> void:
 	var result: SlotData = roulette_manager.spin()
 	roulette_ui.show_result(result, func():
 		ability_executor.execute(result, self)
-		is_spinning = false
-		)
+		is_spinning = false)
+		
 	if result.ability.ability_name == "Basic_attack":
 		await get_tree().create_timer(1).timeout
 		var bullet_inst = bullet_scene.instantiate()
-		add_child(bullet_inst)
+		get_parent().add_child(bullet_inst)
 		bullet_inst.global_position = bullet_mark.global_position
+		var mouse_direction = bullet_mark.global_position.direction_to(get_global_mouse_position())
+		bullet_inst.global_rotation = mouse_direction.angle()
 
 func activate_shield(duration: float) -> void:
 	Debug.log("Escudo activado por %.1f segundos" % duration)

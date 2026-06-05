@@ -18,6 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://buuko6vt0qi76" path="res://characters (players_enemys)/player.tscn" id="15_rv5to"]
 [ext_resource type="PackedScene" uid="uid://diipacc5ir5ma" path="res://autoloads/NextLevel.tscn" id="17_1bxb8"]
 [ext_resource type="PackedScene" uid="uid://bo26knbd8ujwc" path="res://characters (players_enemys)/golem.tscn" id="18_6gurj"]
+[ext_resource type="PackedScene" uid="uid://bytnr38guhsr4" path="res://characters (players_enemys)/enemy.tscn" id="19_0bnej"]
+[ext_resource type="PackedScene" uid="uid://boqm81emqxnc4" path="res://ui/pause_menu.tscn" id="20_ccxey"]
+[ext_resource type="PackedScene" uid="uid://0lmpe62fwxuq" path="res://hud.tscn" id="21_tsgrn"]
+[ext_resource type="PackedScene" uid="uid://c4yytwvjegoff" path="res://characters (players_enemys)/boss.tscn" id="22_tsgrn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gurj"]
 texture = ExtResource("1_j4mar")
@@ -2012,11 +2016,28 @@ tile_map_data = PackedByteArray("AACFAeT/AQAUABAAAACFAeX/AQAUABEAAACGAeT/AQAVABA
 tile_set = SubResource("TileSet_tsgrn")
 
 [node name="player" parent="." unique_id=2033268677 instance=ExtResource("15_rv5to")]
-position = Vector2(645, 372)
+position = Vector2(1187, 365)
+speed = 200
 
 [node name="NextLevel" parent="." unique_id=720976473 instance=ExtResource("17_1bxb8")]
 position = Vector2(6288, -336)
 scale = Vector2(1.2, 1.2)
 
 [node name="Golem" parent="." unique_id=2060251640 instance=ExtResource("18_6gurj")]
-position = Vector2(1026, 363)
+position = Vector2(2448, 354)
+
+[node name="enemy" parent="." unique_id=721203139 instance=ExtResource("19_0bnej")]
+position = Vector2(605, 535)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1354676994]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1592950773 instance=ExtResource("20_ccxey")]
+visible = false
+offset_top = 2.0
+offset_bottom = 2.0
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." unique_id=2088576928 instance=ExtResource("21_tsgrn")]
+
+[node name="Boss" parent="." unique_id=703476347 instance=ExtResource("22_tsgrn")]
+position = Vector2(1759, 316)

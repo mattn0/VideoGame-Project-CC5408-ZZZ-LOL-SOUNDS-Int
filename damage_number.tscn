@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dkywnw2cipiod"]
+
+[ext_resource type="Script" uid="uid://b2imxrbvb6vq1" path="res://damage_number.gd" id="1_jany0"]
+[ext_resource type="FontFile" uid="uid://6t3g78nnpqit" path="res://font/BoldPixels.ttf" id="2_6f2ja"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jany0"]
+font = ExtResource("2_6f2ja")
+font_size = 32
+
+[node name="DamageNumber" type="Node2D" unique_id=165998622]
+script = ExtResource("1_jany0")
+
+[node name="Label" type="Label" parent="." unique_id=672139213]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_jany0")
+horizontal_alignment = 1

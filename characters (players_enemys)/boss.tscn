@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://c4yytwvjegoff"]
 
 [ext_resource type="Script" uid="uid://cl7fvcekgh6aw" path="res://characters (players_enemys)/boss.gd" id="1_v7cbk"]
+[ext_resource type="PackedScene" uid="uid://dkywnw2cipiod" path="res://damage_number.tscn" id="2_mxc6u"]
 [ext_resource type="Texture2D" uid="uid://bjr55jljttkcc" path="res://monsters_resource/boss_demon_slime_FREE_v1.0/spritesheets/demon_slime_FREE_v1.0_288x160_spritesheet.png" id="2_ulgcv"]
 [ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="3_xj2rl"]
 [ext_resource type="PackedScene" uid="uid://b28mfnbbqlmrl" path="res://characters (players_enemys)/mushroom_point.tscn" id="4_ulgcv"]
+[ext_resource type="AudioStream" uid="uid://dwox077j0k1ly" path="res://sounds/freesound_community-hurt_c_08-102842.mp3" id="5_xj2rl"]
+[ext_resource type="Script" uid="uid://ddu7x0vq7tgdr" path="res://components/hurtbox_component.gd" id="6_dq6wi"]
+[ext_resource type="AudioStream" uid="uid://chwye6slxh4kb" path="res://sounds/dragon-studio-monster-growl-390285.mp3" id="7_lahyf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq6wi"]
 size = Vector2(106, 132)
@@ -379,14 +383,20 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0m4y"]
 size = Vector2(112, 136)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lahyf"]
+size = Vector2(115, 138)
+
 [node name="Boss" type="CharacterBody2D" unique_id=703476347]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_v7cbk")
+mushroom_point_scene = ExtResource("4_ulgcv")
+damage_number_scene = ExtResource("2_mxc6u")
 metadata/_custom_type_script = "uid://chwd25lgv6kdm"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=167740884]
-position = Vector2(-1, 44)
+visible = false
+position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_dq6wi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=59490451]
@@ -399,9 +409,10 @@ anim_player = NodePath("../AnimationPlayer")
 [node name="Pivot" type="Node2D" parent="." unique_id=61053245]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1535094486]
-position = Vector2(-4.9999995, -2.9802322e-08)
+position = Vector2(-4.7683716e-07, -3.8146973e-06)
 scale = Vector2(1.275, 1.40625)
 texture = ExtResource("2_ulgcv")
+offset = Vector2(0, -40)
 hframes = 22
 vframes = 5
 
@@ -413,9 +424,25 @@ script = ExtResource("3_xj2rl")
 metadata/_custom_type_script = "uid://c6vunqhf64ov2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HitboxComponent" unique_id=92792134]
-position = Vector2(161, 119)
+visible = false
+position = Vector2(162, 75)
 shape = SubResource("RectangleShape2D_c0m4y")
 
 [node name="mushroom_point" parent="." unique_id=1540310177 instance=ExtResource("4_ulgcv")]
 visible = false
 position = Vector2(-80, 27)
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1351175873]
+stream = ExtResource("5_xj2rl")
+
+[node name="HurtboxComponent" type="Area2D" parent="." unique_id=1385887723]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("6_dq6wi")
+metadata/_custom_type_script = "uid://ddu7x0vq7tgdr"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=1128835106]
+shape = SubResource("RectangleShape2D_lahyf")
+
+[node name="take_hit_sound" type="AudioStreamPlayer" parent="." unique_id=1008852876]
+stream = ExtResource("7_lahyf")
