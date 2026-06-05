@@ -125,5 +125,5 @@ text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1172497392]
 stream = ExtResource("3_wk0pr")
-volume_db = -30.54
+volume_db = -15.566
 autoplay = true

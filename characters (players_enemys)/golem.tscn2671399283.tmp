@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://3gybomasph3p" path="res://monsters_resource/Golems_Free_Version/Golem_1/Blue/White_Swoosh_VFX/Golem_1_die.png" id="2_f35ml"]
 [ext_resource type="Texture2D" uid="uid://de7i40c4lgmrr" path="res://monsters_resource/Golems_Free_Version/Golem_1/Blue/White_Swoosh_VFX/Golem_1_attack.png" id="2_twwku"]
 [ext_resource type="Texture2D" uid="uid://bld68mwaoho57" path="res://monsters_resource/Golems_Free_Version/Golem_1/Blue/White_Swoosh_VFX/Golem_1_hurt.png" id="3_f35ml"]
-[ext_resource type="PackedScene" uid="uid://dkywnw2cipiod" path="res://damage_number.tscn" id="3_l4itw"]
 [ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="3_twwku"]
 [ext_resource type="PackedScene" uid="uid://b28mfnbbqlmrl" path="res://characters (players_enemys)/mushroom_point.tscn" id="8_kap12"]
 [ext_resource type="Script" uid="uid://ddu7x0vq7tgdr" path="res://components/hurtbox_component.gd" id="9_f15tp"]
@@ -387,23 +386,20 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mc68j"]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l4itw"]
-switch_mode = 2
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_mqjo2"]
 states/End/position = Vector2(935, 151)
 states/Start/position = Vector2(241, 151)
 states/death/node = SubResource("AnimationNodeAnimation_1xhyt")
-states/death/position = Vector2(512, 34)
+states/death/position = Vector2(555, 49)
 states/idle/node = SubResource("AnimationNodeAnimation_kap12")
 states/idle/position = Vector2(417, 151)
 states/strike/node = SubResource("AnimationNodeAnimation_f15tp")
-states/strike/position = Vector2(789, 67)
+states/strike/position = Vector2(708, 113)
 states/take_hit/node = SubResource("AnimationNodeAnimation_mc68j")
-states/take_hit/position = Vector2(797, 272)
+states/take_hit/position = Vector2(708, 211)
 states/walk/node = SubResource("AnimationNodeAnimation_l4itw")
-states/walk/position = Vector2(476, 307)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nbc2m"), "idle", "strike", SubResource("AnimationNodeStateMachineTransition_j2cbd"), "idle", "take_hit", SubResource("AnimationNodeStateMachineTransition_qq4m0"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_o4kxj"), "walk", "take_hit", SubResource("AnimationNodeStateMachineTransition_4tf1y"), "take_hit", "strike", SubResource("AnimationNodeStateMachineTransition_toq3d"), "walk", "strike", SubResource("AnimationNodeStateMachineTransition_eq1fe"), "strike", "walk", SubResource("AnimationNodeStateMachineTransition_76a5g"), "strike", "idle", SubResource("AnimationNodeStateMachineTransition_prwuo"), "strike", "take_hit", SubResource("AnimationNodeStateMachineTransition_cqxlo"), "take_hit", "death", SubResource("AnimationNodeStateMachineTransition_3vrur"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_1xhyt"), "take_hit", "idle", SubResource("AnimationNodeStateMachineTransition_mc68j"), "take_hit", "walk", SubResource("AnimationNodeStateMachineTransition_l4itw")]
+states/walk/position = Vector2(555, 266)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nbc2m"), "idle", "strike", SubResource("AnimationNodeStateMachineTransition_j2cbd"), "idle", "take_hit", SubResource("AnimationNodeStateMachineTransition_qq4m0"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_o4kxj"), "walk", "take_hit", SubResource("AnimationNodeStateMachineTransition_4tf1y"), "take_hit", "strike", SubResource("AnimationNodeStateMachineTransition_toq3d"), "walk", "strike", SubResource("AnimationNodeStateMachineTransition_eq1fe"), "strike", "walk", SubResource("AnimationNodeStateMachineTransition_76a5g"), "strike", "idle", SubResource("AnimationNodeStateMachineTransition_prwuo"), "strike", "take_hit", SubResource("AnimationNodeStateMachineTransition_cqxlo"), "take_hit", "death", SubResource("AnimationNodeStateMachineTransition_3vrur"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_1xhyt"), "take_hit", "idle", SubResource("AnimationNodeStateMachineTransition_mc68j")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mc68j"]
 size = Vector2(95, 100)
@@ -415,8 +411,6 @@ size = Vector2(90, 96)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_1xhyt")
-mushroom_point_scene = ExtResource("8_kap12")
-damage_number_scene = ExtResource("3_l4itw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=201832547]
 position = Vector2(0, -2)
@@ -428,9 +422,6 @@ libraries/ = SubResource("AnimationLibrary_mc68j")
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=673803639]
 tree_root = SubResource("AnimationNodeStateMachine_mqjo2")
 anim_player = NodePath("../AnimationPlayer")
-
-[node name="DeathSound" type="AudioStreamPlayer" parent="AnimationTree" unique_id=747945755]
-stream = ExtResource("10_mc68j")
 
 [node name="HurtboxComponent" type="Area2D" parent="." unique_id=196493849]
 collision_layer = 4
@@ -462,6 +453,10 @@ metadata/_custom_type_script = "uid://c6vunqhf64ov2"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HitboxComponent" unique_id=2032632804]
 position = Vector2(162.5, 72)
 shape = SubResource("RectangleShape2D_l4itw")
+
+[node name="mushroom_point" parent="." unique_id=1540310177 instance=ExtResource("8_kap12")]
+visible = false
+position = Vector2(-80, 27)
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1324069635]
 stream = ExtResource("10_mc68j")

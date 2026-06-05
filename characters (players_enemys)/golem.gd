@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var attack_damage = 10
 @export var attack_cooldown = 1.5
 @export var mushroom_point_scene: PackedScene
+@export var damage_number_scene: PackedScene
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Pivot/Sprite2D
@@ -13,16 +14,18 @@ extends CharacterBody2D
 @onready var playback = animation_tree["parameters/playback"]
 @onready var hitbox_component: HitboxComponent = $Pivot/HitboxComponent
 @onready var player: Player = $"../player"
+@onready var death_sound: AudioStreamPlayer = $DeathSound
 
-var maxlife = 100
-var life = 100
+
+var maxlife = 50
+var life = 30
 var knockback = Vector2.ZERO
-var knockback_force = 150.0
+var knockback_force = 200.0
 
 #var player = null
 var can_attack := true
 var is_dead := false
-
+var is_taking_hit := false
 
 func _ready() -> void:
 	animation_player.play("idle")
@@ -33,11 +36,9 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 
-	if is_dead:
+	if is_dead or is_taking_hit:
 		return
-		
-	knockback = lerp(knockback, Vector2.ZERO, 0.1)
-	velocity += knockback
+	
 	
 	#if player  == null or not is_instance_valid(player):
 	#	player = get_tree().get_first_node_in_group("player")
@@ -58,6 +59,9 @@ func _physics_process(delta: float) -> void:
 		playback.travel("walk")
 		velocity = direction * speed
 		sprite_2d.flip_h = direction.x < 0
+		
+	knockback = lerp(knockback, Vector2.ZERO, 0.1)
+	velocity += knockback
 			
 	move_and_slide()
 	
@@ -77,22 +81,33 @@ func _attack() -> void:
 		can_attack = true
 
 func take_damage(value: int, badguy: Node2D) -> void:
-	#Debug.log("%s received %d damage" % [name, value])	
-	animation_tree["parameters/take_hit/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
-	#animation_tree["parameters/take_hit/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT
+	Debug.log("%s received %d damage" % [name, value])
 	life -= value
-	knockback = badguy.global_position.direction_to(global_position) * knockback_force
-	
-	knockback = badguy.global_position.direction_to(global_position) * knockback_force
+	#knockback = player.global_position.direction_to(global_position) * knockback_force
+	if damage_number_scene:
+		var dmg_num = damage_number_scene.instantiate()
+		get_parent().add_child(dmg_num)
+		dmg_num.global_position = global_position + Vector2(0, -60)
+		dmg_num.setup(value)
+	is_taking_hit = true
+	playback.travel("take_hit")
+	await get_tree().create_timer(0.4).timeout
+	is_taking_hit = false
+	#animation_player.play("take_hit")
+	#animation_tree["parameters/take_hit/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+	#animation_tree["parameters/take_hit/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT
+
 	
 	if life <= 0:
 		_die()
 		
 func _die() -> void:
 	is_dead = true
-	animation_tree["parameters/death/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+	death_sound.play()
+	playback.travel("death")
 	await get_tree().create_timer(1.2).timeout
 	sprite_2d.hide()
+	
 	#suelta mushrooms de puntos
 	if mushroom_point_scene:
 		var mushroom = mushroom_point_scene.instantiate()

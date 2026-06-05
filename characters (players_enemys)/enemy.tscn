@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cbqkfbd4j3j54" path="res://characters (players_enemys)/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://nm6jh5x1wb8r" path="res://monsters_resource/Mushroom with VFX/Mushroom-Idle.png" id="1_7k104"]
+[ext_resource type="Script" uid="uid://ddu7x0vq7tgdr" path="res://components/hurtbox_component.gd" id="4_o5j71"]
 [ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="4_slujw"]
+[ext_resource type="AudioStream" uid="uid://dwox077j0k1ly" path="res://sounds/freesound_community-hurt_c_08-102842.mp3" id="5_o5j71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
 size = Vector2(30, 44)
@@ -97,6 +99,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5j71"]
 size = Vector2(38, 47)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fe8s4"]
+size = Vector2(42, 51)
+
 [node name="enemy" type="CharacterBody2D" unique_id=721203139]
 script = ExtResource("1_4gyqm")
 
@@ -124,3 +129,16 @@ metadata/_custom_type_script = "uid://c6vunqhf64ov2"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=200175317]
 position = Vector2(163, 74.5)
 shape = SubResource("RectangleShape2D_o5j71")
+
+[node name="HurtboxComponent" type="Area2D" parent="." unique_id=724522758]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("4_o5j71")
+metadata/_custom_type_script = "uid://ddu7x0vq7tgdr"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=1327034505]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_fe8s4")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1721934325]
+stream = ExtResource("5_o5j71")
