@@ -285,6 +285,7 @@ texture = ExtResource("1_jnmpp")
 
 [sub_resource type="TileSet" id="TileSet_46xdq"]
 sources/0 = SubResource("TileSetAtlasSource_k6hxo")
+[ext_resource type="PackedScene" uid="uid://bo26knbd8ujwc" path="res://characters (players_enemys)/golem.tscn" id="22_jnmpp"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_fmwlo"]
 resource_name = "Level2"
@@ -2025,3 +2026,8 @@ position = Vector2(3943, 190)
 position = Vector2(38, 326)
 shape = SubResource("SegmentShape2D_k6hxo")
 debug_color = Color(1, 0, 0, 0.41960785)
+position = Vector2(901, 333)
+speed = 30
+
+[node name="Golem" parent="." unique_id=2060251640 instance=ExtResource("22_jnmpp")]
+position = Vector2(1101, 362)

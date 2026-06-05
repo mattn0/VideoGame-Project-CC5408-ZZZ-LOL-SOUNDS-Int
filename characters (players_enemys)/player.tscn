@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cpfdq8hmhypa6" path="res://character_resource/player-sprite-sheet.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://chwd25lgv6kdm" path="res://characters (players_enemys)/player.gd" id="1_onrkg"]
 [ext_resource type="AudioStream" uid="uid://dwox077j0k1ly" path="res://sounds/freesound_community-hurt_c_08-102842.mp3" id="2_4cr1n"]
+[ext_resource type="PackedScene" uid="uid://bjvok0my2gnln" path="res://Bullet.tscn" id="2_f3tjm"]
 [ext_resource type="AudioStream" uid="uid://c6x1wocky255w" path="res://sounds/dragon-studio-pop-402323.mp3" id="3_i3pqv"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://i8igxsu4no4s" path="res://movement_animationtree.tres" id="4_440fc"]
 [ext_resource type="Script" uid="uid://ddu7x0vq7tgdr" path="res://components/hurtbox_component.gd" id="5_4cr1n"]
@@ -422,6 +423,8 @@ size = Vector2(27, 43)
 
 [node name="player" type="CharacterBody2D" unique_id=1788912813]
 script = ExtResource("1_onrkg")
+speed = 600
+bullet_scene = ExtResource("2_f3tjm")
 
 [node name="camara" type="Camera2D" parent="." unique_id=731177840]
 
@@ -473,3 +476,7 @@ script = ExtResource("7_fuk28")
 script = ExtResource("8_lpfip")
 
 [node name="RouletteUI" parent="." unique_id=574073914 instance=ExtResource("9_lpfip")]
+
+[node name="Bullet_mark" type="Marker2D" parent="." unique_id=863755578]
+position = Vector2(0, -5)
+gizmo_extents = 23.0

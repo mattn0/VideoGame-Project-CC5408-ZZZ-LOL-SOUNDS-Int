@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://de7i40c4lgmrr" path="res://monsters_resource/Golems_Free_Version/Golem_1/Blue/White_Swoosh_VFX/Golem_1_attack.png" id="2_twwku"]
 [ext_resource type="Texture2D" uid="uid://bld68mwaoho57" path="res://monsters_resource/Golems_Free_Version/Golem_1/Blue/White_Swoosh_VFX/Golem_1_hurt.png" id="3_f35ml"]
 [ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="3_twwku"]
+[ext_resource type="PackedScene" uid="uid://b28mfnbbqlmrl" path="res://characters (players_enemys)/mushroom_point.tscn" id="8_kap12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f35ml"]
 size = Vector2(85, 92)
@@ -399,10 +400,12 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 size = Vector2(90, 96)
 
 [node name="Golem" type="CharacterBody2D" unique_id=2060251640]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_1xhyt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=201832547]
-position = Vector2(0.5, 37)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_f35ml")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2097041355]
@@ -415,7 +418,7 @@ anim_player = NodePath("../AnimationPlayer")
 [node name="Pivot" type="Node2D" parent="." unique_id=177064267]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=801386319]
-position = Vector2(1.0000019, 1.9073486e-06)
+position = Vector2(1.1920929e-07, -36.999992)
 scale = Vector2(2.3520834, 2.578125)
 texture = ExtResource("1_7663a")
 flip_h = true
@@ -430,5 +433,9 @@ script = ExtResource("3_twwku")
 metadata/_custom_type_script = "uid://c6vunqhf64ov2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HitboxComponent" unique_id=2032632804]
-position = Vector2(163, 111)
+position = Vector2(162.5, 72)
 shape = SubResource("RectangleShape2D_l4itw")
+
+[node name="mushroom_point" parent="." unique_id=1540310177 instance=ExtResource("8_kap12")]
+visible = false
+position = Vector2(-80, 27)

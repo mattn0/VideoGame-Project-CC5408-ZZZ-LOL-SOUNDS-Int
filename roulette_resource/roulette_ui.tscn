@@ -7,6 +7,10 @@
 [node name="RouletteUI" type="CanvasLayer" unique_id=574073914]
 script = ExtResource("1_5chbi")
 
+[node name="Overlay" type="ColorRect" parent="." unique_id=1702463520]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Center" type="Control" parent="." unique_id=517083889]
 layout_mode = 3
 anchors_preset = 0

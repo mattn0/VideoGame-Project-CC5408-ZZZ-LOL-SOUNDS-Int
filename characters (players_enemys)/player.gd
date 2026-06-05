@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export var speed = 300
+@export var bullet_scene: PackedScene
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var death_sound: AudioStreamPlayer = $DeathSound
@@ -12,6 +13,7 @@ extends CharacterBody2D
 @onready var roulette_manager: RouletterManager = $RouletteManager
 @onready var ability_executor: AbilityExecutor = $AbilityExecutor
 @onready var roulette_ui: RouletteUI = $RouletteUI
+@onready var bullet_mark: Marker2D = $Bullet_mark
 
 var maxlife = 100
 var life = 100
@@ -101,6 +103,11 @@ func _trigger_attack() -> void:
 		ability_executor.execute(result, self)
 		is_spinning = false
 		)
+	if result.ability.ability_name == "Basic_attack":
+		await get_tree().create_timer(1).timeout
+		var bullet_inst = bullet_scene.instantiate()
+		add_child(bullet_inst)
+		bullet_inst.global_position = bullet_mark.global_position
 
 func activate_shield(duration: float) -> void:
 	Debug.log("Escudo activado por %.1f segundos" % duration)
