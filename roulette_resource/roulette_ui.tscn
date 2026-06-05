@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bxphm1ybsjn8f"]
+
+[ext_resource type="Script" uid="uid://6eq1pydok8u4" path="res://roulette_resource/roulette_ui.gd" id="1_5chbi"]
+[ext_resource type="Texture2D" uid="uid://cqfobumhrjiid" path="res://roulette_resource/roullete-sprite.png" id="1_hb77g"]
+[ext_resource type="Texture2D" uid="uid://dhd2rt0kumy6q" path="res://roulette_resource/point-for-roullete.png" id="2_426vd"]
+
+[node name="RouletteUI" type="CanvasLayer" unique_id=574073914]
+script = ExtResource("1_5chbi")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1702463520]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Center" type="Control" parent="." unique_id=517083889]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WheelSprite" type="Sprite2D" parent="Center" unique_id=1316212082]
+rotation = 0.26529005
+texture = ExtResource("1_hb77g")
+
+[node name="ArrowSprite" type="Sprite2D" parent="Center" unique_id=2017826091]
+z_index = 1
+texture = ExtResource("2_426vd")
+
+[node name="ResultLabel" type="Label" parent="Center" unique_id=10485338]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://btidp60a8tikm"]
+
+[ext_resource type="Texture2D" uid="uid://c6iww4l533lej" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0000.png" id="1_fx4dp"]
+[ext_resource type="Texture2D" uid="uid://duruagx36x6x5" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0001.png" id="2_yf66m"]
+[ext_resource type="Texture2D" uid="uid://i4jv6e35kv2f" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0002.png" id="3_fug31"]
+[ext_resource type="Texture2D" uid="uid://l7rv7dfu5qvs" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0003.png" id="4_o1qnl"]
+[ext_resource type="Texture2D" uid="uid://dv7u6adi8n4ly" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0004.png" id="5_ynp08"]
+[ext_resource type="Texture2D" uid="uid://cescr0rjjcsq2" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0005.png" id="6_x6ymw"]
+[ext_resource type="Texture2D" uid="uid://tolrhfkvr7et" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0006.png" id="7_5y4e6"]
+[ext_resource type="Texture2D" uid="uid://b6b7w1x151f1x" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0007.png" id="8_8lmks"]
+[ext_resource type="Texture2D" uid="uid://detj5i6egx1d5" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0008.png" id="9_2lm8b"]
+[ext_resource type="Texture2D" uid="uid://ca0yhq8iiypvi" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0009.png" id="10_gfmkj"]
+[ext_resource type="Texture2D" uid="uid://w3ndvlxlcv70" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0010.png" id="11_kkjmu"]
+[ext_resource type="Texture2D" uid="uid://q1f47c3gdgjf" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0011.png" id="12_imdcj"]
+[ext_resource type="Texture2D" uid="uid://chn13ciiomt1i" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0012.png" id="13_r6jfg"]
+[ext_resource type="Texture2D" uid="uid://boyfijsm7gyiq" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0013.png" id="14_nt7db"]
+[ext_resource type="Texture2D" uid="uid://cw1777fa27dtl" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0014.png" id="15_cwin0"]
+[ext_resource type="Texture2D" uid="uid://cadi36vt7v1yp" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0015.png" id="16_yb0pi"]
+[ext_resource type="Texture2D" uid="uid://dauhc1r0atv4m" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0016.png" id="17_ckfp6"]
+[ext_resource type="Texture2D" uid="uid://cdg6n6pjqnvta" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0017.png" id="18_ammo7"]
+[ext_resource type="Texture2D" uid="uid://bwfhmc7blsb6v" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0018.png" id="19_mi1iq"]
+[ext_resource type="Texture2D" uid="uid://dv6artl2itn3q" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0019.png" id="20_n3ht2"]
+[ext_resource type="Texture2D" uid="uid://cby07g2o2si8v" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0020.png" id="21_21yf3"]
+[ext_resource type="Texture2D" uid="uid://dlmpu30yk2l22" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0021.png" id="22_ihxut"]
+[ext_resource type="Texture2D" uid="uid://chs0w08mbjkea" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0022.png" id="23_lff4s"]
+[ext_resource type="Texture2D" uid="uid://cmn34qloyo74w" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0023.png" id="24_52ddw"]
+[ext_resource type="Texture2D" uid="uid://d1xh76r6iqi7" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0024.png" id="25_gnw8q"]
+[ext_resource type="Texture2D" uid="uid://nih5jx1sw6j8" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0025.png" id="26_ot0h0"]
+[ext_resource type="Texture2D" uid="uid://bjgy24nbuche5" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0026.png" id="27_yshfg"]
+[ext_resource type="Texture2D" uid="uid://dmlvk6iivtlm0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0027.png" id="28_g1b42"]
+[ext_resource type="Texture2D" uid="uid://f5nymes2qy80" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0028.png" id="29_mtslh"]
+[ext_resource type="Texture2D" uid="uid://bq7gtfyyapuev" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0029.png" id="30_jfj1m"]
+[ext_resource type="Texture2D" uid="uid://mn5xob3cda0u" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0030.png" id="31_j5i0d"]
+[ext_resource type="Texture2D" uid="uid://tm6o2oiwhdbt" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0031.png" id="32_8733j"]
+[ext_resource type="Texture2D" uid="uid://pkxvb7k5ilyc" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0032.png" id="33_8ov4b"]
+[ext_resource type="Texture2D" uid="uid://d36t50fgrpobo" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0033.png" id="34_fg3e8"]
+[ext_resource type="Texture2D" uid="uid://d1yyxcuk8e0xj" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0034.png" id="35_65dvh"]
+[ext_resource type="Texture2D" uid="uid://cg2l3opisulmt" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0035.png" id="36_nfxrp"]
+[ext_resource type="Texture2D" uid="uid://b0636xf4w02ad" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0036.png" id="37_cpdoa"]
+[ext_resource type="Texture2D" uid="uid://d0qifpbb1mn62" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0037.png" id="38_gm30h"]
+[ext_resource type="Texture2D" uid="uid://cji7c41xfet5k" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0038.png" id="39_47wmk"]
+[ext_resource type="Texture2D" uid="uid://cuuqxokhmwa2h" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0039.png" id="40_t7obk"]
+[ext_resource type="Texture2D" uid="uid://dw80k2shohs3r" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0040.png" id="41_imxhy"]
+[ext_resource type="Texture2D" uid="uid://8sbkj468i4d3" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0041.png" id="42_x6iy6"]
+[ext_resource type="Texture2D" uid="uid://d0b65bctxbggj" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0042.png" id="43_3u4hr"]
+[ext_resource type="Texture2D" uid="uid://cop8vqdkei6x0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_level_up_text_001/symbol_level_up_text_001_large_blue/frame0043.png" id="44_6gyri"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ne08g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fx4dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yf66m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fug31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o1qnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ynp08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x6ymw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5y4e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8lmks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2lm8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gfmkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kkjmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_imdcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r6jfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nt7db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cwin0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yb0pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ckfp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ammo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mi1iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n3ht2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_21yf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ihxut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lff4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_52ddw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gnw8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ot0h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yshfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_g1b42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mtslh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jfj1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j5i0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_8733j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_8ov4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_fg3e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_65dvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nfxrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cpdoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gm30h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_47wmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_t7obk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_imxhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_x6iy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_3u4hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_6gyri")
+}],
+"loop": true,
+"name": &"SymbolLevelUp",
+"speed": 45.0
+}]
+
+[node name="SybolLevelUp" type="Node2D" unique_id=2132858222]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=788856892]
+sprite_frames = SubResource("SpriteFrames_ne08g")
+animation = &"SymbolLevelUp"
+frame_progress = 0.31982273

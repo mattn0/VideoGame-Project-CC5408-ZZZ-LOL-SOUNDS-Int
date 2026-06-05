@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bb7v3cajwtojr"]
+
+[ext_resource type="Texture2D" uid="uid://gyrk5u841xfj" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Fantasy Spells/spell_heal_001/spell_heal_001_large_red/spritesheet.png" id="1_r6t8n"]
+
+[sub_resource type="Animation" id="Animation_jwnau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qyaob"]
+resource_name = "SpellHeal"
+length = 0.53333336
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333337, 0.4666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ar1bg"]
+_data = {
+&"RESET": SubResource("Animation_jwnau"),
+&"SpellHeal": SubResource("Animation_qyaob")
+}
+
+[node name="SpellHeal" type="Node2D" unique_id=1691165587]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1079706612]
+libraries/ = SubResource("AnimationLibrary_ar1bg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1052859425]
+texture = ExtResource("1_r6t8n")
+hframes = 16

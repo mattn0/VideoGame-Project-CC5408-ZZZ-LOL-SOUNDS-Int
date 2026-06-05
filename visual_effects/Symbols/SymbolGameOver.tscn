@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://bknx1l3u2lkls"]
+
+[ext_resource type="Texture2D" uid="uid://chi1ke2rhtjem" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0000.png" id="1_gits5"]
+[ext_resource type="Texture2D" uid="uid://3373vigqln04" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0001.png" id="2_o6vs8"]
+[ext_resource type="Texture2D" uid="uid://c6t5drme28tgo" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0002.png" id="3_u6y1j"]
+[ext_resource type="Texture2D" uid="uid://dfnttkj35uiu0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0003.png" id="4_nssxx"]
+[ext_resource type="Texture2D" uid="uid://daq0botoldpyd" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0004.png" id="5_rv16f"]
+[ext_resource type="Texture2D" uid="uid://rcxdqepf08gi" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0005.png" id="6_djefx"]
+[ext_resource type="Texture2D" uid="uid://i4q2ls2rqcj0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0006.png" id="7_0it7n"]
+[ext_resource type="Texture2D" uid="uid://ssmwsajjaktq" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0007.png" id="8_eqafp"]
+[ext_resource type="Texture2D" uid="uid://kxq1hcc4ltym" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0008.png" id="9_qg7c7"]
+[ext_resource type="Texture2D" uid="uid://xe2kldxcej2l" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0009.png" id="10_pbjfd"]
+[ext_resource type="Texture2D" uid="uid://dcbtnu6kytuej" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0010.png" id="11_6ku85"]
+[ext_resource type="Texture2D" uid="uid://b6ydnkmc288nh" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0011.png" id="12_4k2ap"]
+[ext_resource type="Texture2D" uid="uid://b3h1threjl4q2" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0012.png" id="13_mb0du"]
+[ext_resource type="Texture2D" uid="uid://c3dxglwrvrr6a" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0013.png" id="14_h67gk"]
+[ext_resource type="Texture2D" uid="uid://dlrrasqb70tkc" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0014.png" id="15_sqynb"]
+[ext_resource type="Texture2D" uid="uid://cdnj4gg6sc4me" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0015.png" id="16_ivug1"]
+[ext_resource type="Texture2D" uid="uid://ddwcykjicdy0c" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0016.png" id="17_fwg5i"]
+[ext_resource type="Texture2D" uid="uid://d2edlqp3acn47" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0017.png" id="18_b3lop"]
+[ext_resource type="Texture2D" uid="uid://o5nccwi5e0gd" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0018.png" id="19_405ib"]
+[ext_resource type="Texture2D" uid="uid://ctrnxueqjghxx" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0019.png" id="20_obx5v"]
+[ext_resource type="Texture2D" uid="uid://8j6i75ennubl" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0020.png" id="21_v6x4c"]
+[ext_resource type="Texture2D" uid="uid://d1lkx045gcttx" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0021.png" id="22_yyjie"]
+[ext_resource type="Texture2D" uid="uid://dl8boki4hskvx" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0022.png" id="23_fkfil"]
+[ext_resource type="Texture2D" uid="uid://b6w6rc8eysfex" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0023.png" id="24_8b6l0"]
+[ext_resource type="Texture2D" uid="uid://bafbvwyh4cld4" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0024.png" id="25_iu3dt"]
+[ext_resource type="Texture2D" uid="uid://c2kp1nwibp18j" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0025.png" id="26_eteqf"]
+[ext_resource type="Texture2D" uid="uid://3ynrdit03lgs" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0026.png" id="27_vlcgj"]
+[ext_resource type="Texture2D" uid="uid://hjye6gnp12rw" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0027.png" id="28_22mq3"]
+[ext_resource type="Texture2D" uid="uid://bl38c1myvmod7" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0028.png" id="29_pys8a"]
+[ext_resource type="Texture2D" uid="uid://dd5b7ipkmwawk" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0029.png" id="30_o8ax4"]
+[ext_resource type="Texture2D" uid="uid://cfhcqwyu5bqv6" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0030.png" id="31_hfhe0"]
+[ext_resource type="Texture2D" uid="uid://bow1fkmjc3dco" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0031.png" id="32_g4xvp"]
+[ext_resource type="Texture2D" uid="uid://cwtkwqhx141lr" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0032.png" id="33_ej04y"]
+[ext_resource type="Texture2D" uid="uid://bjmeyvmbneymg" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0033.png" id="34_i60x1"]
+[ext_resource type="Texture2D" uid="uid://c44lx85rfhd1h" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0034.png" id="35_py5c4"]
+[ext_resource type="Texture2D" uid="uid://dty1kknqk1up6" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0035.png" id="36_axkg2"]
+[ext_resource type="Texture2D" uid="uid://b0js1awcnd7ex" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0036.png" id="37_ydlbh"]
+[ext_resource type="Texture2D" uid="uid://w0bieaf61yow" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0037.png" id="38_a2boh"]
+[ext_resource type="Texture2D" uid="uid://c0o112wetctr0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0038.png" id="39_eapqb"]
+[ext_resource type="Texture2D" uid="uid://d3kfpvbivs21x" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0039.png" id="40_vjadq"]
+[ext_resource type="Texture2D" uid="uid://bigtp736umf8x" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0040.png" id="41_b6ti2"]
+[ext_resource type="Texture2D" uid="uid://dhyeoyovflo" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0041.png" id="42_5wfr5"]
+[ext_resource type="Texture2D" uid="uid://b3xpvpp6ao1dk" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0042.png" id="43_3oay6"]
+[ext_resource type="Texture2D" uid="uid://dquqhjv2mc1uo" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_game_over_text_001/symbol_game_over_text_001_large_red/frame0043.png" id="44_chk1w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ic2hk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gits5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o6vs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u6y1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nssxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rv16f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_djefx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0it7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eqafp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qg7c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pbjfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6ku85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4k2ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mb0du")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_h67gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sqynb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ivug1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fwg5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_b3lop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_405ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_obx5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_v6x4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yyjie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_fkfil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8b6l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_iu3dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_eteqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vlcgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_22mq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pys8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_o8ax4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_hfhe0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_g4xvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ej04y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_i60x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_py5c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_axkg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ydlbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_a2boh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_eapqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vjadq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_b6ti2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_5wfr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_3oay6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_chk1w")
+}],
+"loop": true,
+"name": &"SymbolGameOver",
+"speed": 45.0
+}]
+
+[node name="SymbolGameOver" type="Node2D" unique_id=836694398]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=123775884]
+sprite_frames = SubResource("SpriteFrames_ic2hk")
+animation = &"SymbolGameOver"
+frame_progress = 0.85419065

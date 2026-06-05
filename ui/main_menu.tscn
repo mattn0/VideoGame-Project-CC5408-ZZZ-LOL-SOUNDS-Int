@@ -22,15 +22,16 @@ grow_vertical = 2
 script = ExtResource("1_0dkrt")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=780856093]
+layer = -80
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2100448510]
 motion_mirroring = Vector2(1360, 0)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer" unique_id=37329970]
-offset_left = -186.0
-offset_top = -1.0
-offset_right = 1174.0
-offset_bottom = 419.0
+offset_left = -1.0
+offset_top = -14.0
+offset_right = 2187.9524
+offset_bottom = 662.0
 texture = ExtResource("2_8uxxo")
 expand_mode = 3
 stretch_mode = 1
@@ -39,10 +40,10 @@ stretch_mode = 1
 motion_mirroring = Vector2(1360, 0)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3" unique_id=953835501]
-offset_left = -179.0
-offset_top = 198.0
-offset_right = 1181.0
-offset_bottom = 618.0
+offset_left = 2.0
+offset_top = 136.0
+offset_right = 1362.0
+offset_bottom = 556.0
 texture = ExtResource("3_p8ri8")
 stretch_mode = 1
 
@@ -50,10 +51,10 @@ stretch_mode = 1
 motion_mirroring = Vector2(1360, 0)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2" unique_id=1766814907]
-offset_left = -182.0
-offset_top = 266.0
-offset_right = 1178.0
-offset_bottom = 686.0
+offset_left = -2.0
+offset_top = 317.0
+offset_right = 1358.0
+offset_bottom = 737.0
 texture = ExtResource("3_ei257")
 stretch_mode = 1
 
@@ -90,9 +91,8 @@ layout_mode = 2
 theme_override_constants/line_spacing = -12
 theme_override_constants/paragraph_spacing = 0
 theme_override_font_sizes/font_size = 50
-text = "mushrooms
-&
-¿mushrooms?"
+text = "Fate
+Collapse"
 horizontal_alignment = 1
 vertical_alignment = 1
 

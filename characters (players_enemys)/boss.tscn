@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://c4yytwvjegoff"]
 
-[ext_resource type="Script" uid="uid://chwd25lgv6kdm" path="res://characters (players_enemys)/player.gd" id="1_v7cbk"]
+[ext_resource type="Script" uid="uid://cl7fvcekgh6aw" path="res://characters (players_enemys)/boss.gd" id="1_v7cbk"]
 [ext_resource type="Texture2D" uid="uid://bjr55jljttkcc" path="res://monsters_resource/boss_demon_slime_FREE_v1.0/spritesheets/demon_slime_FREE_v1.0_288x160_spritesheet.png" id="2_ulgcv"]
 [ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="3_xj2rl"]
+[ext_resource type="PackedScene" uid="uid://b28mfnbbqlmrl" path="res://characters (players_enemys)/mushroom_point.tscn" id="4_ulgcv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq6wi"]
-size = Vector2(116, 132)
+size = Vector2(106, 132)
 
 [sub_resource type="Animation" id="Animation_lahyf"]
 length = 0.001
@@ -376,14 +377,16 @@ states/walk/position = Vector2(538, 250)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_mxc6u"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_ddbic"), "idle", "strike", SubResource("AnimationNodeStateMachineTransition_ljtw1"), "idle", "take_hit", SubResource("AnimationNodeStateMachineTransition_knq4k"), "strike", "idle", SubResource("AnimationNodeStateMachineTransition_2hth0"), "walk", "take_hit", SubResource("AnimationNodeStateMachineTransition_sgwu6"), "take_hit", "death", SubResource("AnimationNodeStateMachineTransition_c0m4y")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0m4y"]
-size = Vector2(122, 136)
+size = Vector2(112, 136)
 
 [node name="Boss" type="CharacterBody2D" unique_id=703476347]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_v7cbk")
 metadata/_custom_type_script = "uid://chwd25lgv6kdm"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=167740884]
-position = Vector2(4, 44)
+position = Vector2(-1, 44)
 shape = SubResource("RectangleShape2D_dq6wi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=59490451]
@@ -410,5 +413,9 @@ script = ExtResource("3_xj2rl")
 metadata/_custom_type_script = "uid://c6vunqhf64ov2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HitboxComponent" unique_id=92792134]
-position = Vector2(166, 119)
+position = Vector2(161, 119)
 shape = SubResource("RectangleShape2D_c0m4y")
+
+[node name="mushroom_point" parent="." unique_id=1540310177 instance=ExtResource("4_ulgcv")]
+visible = false
+position = Vector2(-80, 27)

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bj1w2n0deqdat"]
+
+[ext_resource type="Texture2D" uid="uid://bvl6gc43aov7y" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Splatters/directional_splatter_001/directional_splatter_001_large_red/spritesheet.png" id="1_vpq8i"]
+
+[sub_resource type="Animation" id="Animation_ta2a0"]
+resource_name = "DirectionalSplatter"
+length = 0.23333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_7rdm8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxc51"]
+_data = {
+&"DirectionalSplatter": SubResource("Animation_ta2a0"),
+&"RESET": SubResource("Animation_7rdm8")
+}
+
+[node name="DirectionalSplatter" type="Node2D" unique_id=1535280281]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=239816340]
+texture = ExtResource("1_vpq8i")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1089401257]
+libraries/ = SubResource("AnimationLibrary_qxc51")

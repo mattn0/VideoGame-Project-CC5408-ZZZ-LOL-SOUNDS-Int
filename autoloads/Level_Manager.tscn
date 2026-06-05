@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://lykwm0ugetai" path="res://autoloads/level_manager.gd" id="1_lrs7n"]
 [ext_resource type="PackedScene" uid="uid://cef0t50epewvx" path="res://levels/Level1.tscn" id="2_iup43"]
-[ext_resource type="PackedScene" uid="uid://3i06dko7tfrq" path="res://levels/Level2.tscn" id="3_w7hil"]
 [ext_resource type="PackedScene" uid="uid://k05k13gs7aax" path="res://levels/Level3.tscn" id="4_tbbhy"]
+[ext_resource type="PackedScene" uid="uid://x0cxai4tcqom" path="res://levels/Level4.tscn" id="5_iup43"]
 
 [node name="LevelManager" type="Node" unique_id=727243437]
 script = ExtResource("1_lrs7n")
-levels = Array[PackedScene]([ExtResource("2_iup43"), ExtResource("3_w7hil"), ExtResource("4_tbbhy")])
+levels = Array[PackedScene]([ExtResource("2_iup43"), null, ExtResource("4_tbbhy"), ExtResource("5_iup43")])

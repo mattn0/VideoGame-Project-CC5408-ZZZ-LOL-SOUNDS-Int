@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BasicAttack" format=3 uid="uid://bs33j1spm3wj2"]
+
+[ext_resource type="Script" uid="uid://cru75emghv4oi" path="res://abilities/basic_attack.gd" id="1_i054y"]
+
+[resource]
+script = ExtResource("1_i054y")
+ability_name = "Basic_attack"
+display_name = "Basic_attack"
+metadata/_custom_type_script = "uid://cru75emghv4oi"

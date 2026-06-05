@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://dk18llu5o3ns2"]
+
+[ext_resource type="Texture2D" uid="uid://dp8ipkp88jeak" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0000.png" id="1_dwb8i"]
+[ext_resource type="Texture2D" uid="uid://bxwkqpeff8h68" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0001.png" id="2_cj4hl"]
+[ext_resource type="Texture2D" uid="uid://diryshv1vdkoj" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0002.png" id="3_6f3vf"]
+[ext_resource type="Texture2D" uid="uid://c34pg742e5qr3" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0003.png" id="4_dm8vx"]
+[ext_resource type="Texture2D" uid="uid://bsqvgd3kd0ynq" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0004.png" id="5_5v75b"]
+[ext_resource type="Texture2D" uid="uid://dh5whewf3f5qe" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0005.png" id="6_iqps8"]
+[ext_resource type="Texture2D" uid="uid://b1456ahak7wta" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0006.png" id="7_kuvn2"]
+[ext_resource type="Texture2D" uid="uid://dny454qv0kpg0" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0007.png" id="8_q7lbu"]
+[ext_resource type="Texture2D" uid="uid://bg14jo5hw4fda" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0008.png" id="9_xdlcf"]
+[ext_resource type="Texture2D" uid="uid://c6u44fy3pwd3t" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0009.png" id="10_a26x1"]
+[ext_resource type="Texture2D" uid="uid://c8irwgchmq1yc" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0010.png" id="11_in5am"]
+[ext_resource type="Texture2D" uid="uid://by4xbl807y5fn" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0011.png" id="12_53rvt"]
+[ext_resource type="Texture2D" uid="uid://bej6gi2g4n87d" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0012.png" id="13_441fk"]
+[ext_resource type="Texture2D" uid="uid://c4fhtofnqm2uv" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0013.png" id="14_qe0v2"]
+[ext_resource type="Texture2D" uid="uid://db6wg1c2p24ec" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0014.png" id="15_pnlbt"]
+[ext_resource type="Texture2D" uid="uid://v1agex8ee7tb" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0015.png" id="16_ri0js"]
+[ext_resource type="Texture2D" uid="uid://b3sxpmylyyjc" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0016.png" id="17_4lp6i"]
+[ext_resource type="Texture2D" uid="uid://dik63inotf4bh" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0017.png" id="18_l8yqw"]
+[ext_resource type="Texture2D" uid="uid://dhk7yuw20efkn" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0018.png" id="19_8e7pn"]
+[ext_resource type="Texture2D" uid="uid://xt74sioorqva" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0019.png" id="20_0bi3e"]
+[ext_resource type="Texture2D" uid="uid://bx42h3gunwsf6" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0020.png" id="21_n5w4e"]
+[ext_resource type="Texture2D" uid="uid://b2tckufpasq6" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0021.png" id="22_0y5oh"]
+[ext_resource type="Texture2D" uid="uid://da037urnkk3a1" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0022.png" id="23_lrcwe"]
+[ext_resource type="Texture2D" uid="uid://rg1wyt7gkwxc" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0023.png" id="24_gtf6d"]
+[ext_resource type="Texture2D" uid="uid://8fgkdw3o82bm" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0024.png" id="25_hv2on"]
+[ext_resource type="Texture2D" uid="uid://bgj68bydfd8mc" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0025.png" id="26_iu4x0"]
+[ext_resource type="Texture2D" uid="uid://jio0g4mohuuy" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0026.png" id="27_3w4jw"]
+[ext_resource type="Texture2D" uid="uid://caf7r20lwj5tk" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0027.png" id="28_lkhba"]
+[ext_resource type="Texture2D" uid="uid://dfdhynb18p8xs" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0028.png" id="29_ll3e8"]
+[ext_resource type="Texture2D" uid="uid://1yqj8e3miab5" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0029.png" id="30_so4qm"]
+[ext_resource type="Texture2D" uid="uid://dpnso6hy4ddpr" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0030.png" id="31_jyay7"]
+[ext_resource type="Texture2D" uid="uid://cs65h461gdsbr" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0031.png" id="32_fme0w"]
+[ext_resource type="Texture2D" uid="uid://bmvhpamsg4d26" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0033.png" id="33_52fxd"]
+[ext_resource type="Texture2D" uid="uid://dhiliifvs7dy7" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/PNG/Symbols/symbol_wow_text_001/symbol_wow_text_001_large_yellow/frame0032.png" id="34_y7huu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p7yjp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dwb8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cj4hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6f3vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dm8vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5v75b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iqps8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kuvn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q7lbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xdlcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a26x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_in5am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_53rvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_441fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qe0v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pnlbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ri0js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4lp6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l8yqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8e7pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0bi3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_n5w4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0y5oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lrcwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gtf6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hv2on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_iu4x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3w4jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lkhba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ll3e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_so4qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jyay7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fme0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_52fxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_y7huu")
+}],
+"loop": true,
+"name": &"SymbolWOW",
+"speed": 45.0
+}]
+
+[node name="SymbolWow" type="Node2D" unique_id=647303121]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=469842714]
+sprite_frames = SubResource("SpriteFrames_p7yjp")
+animation = &"SymbolWOW"
+frame_progress = 0.48218492
