@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dgj3t3ytup41d"]
+
+[ext_resource type="Script" uid="uid://bsailfnwj0eta" path="res://ui/game_over.gd" id="1_5eixk"]
+[ext_resource type="Theme" uid="uid://bjjde1serycx" path="res://resources/theme.tres" id="2_j1fe5"]
+
+[node name="GameOver" type="Control" unique_id=841406529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5eixk")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=224298657]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -136.5
+offset_right = 66.0
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=672404876]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("2_j1fe5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2089596597]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1091036410]
+layout_mode = 2
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=404409272]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Retry"
+
+[node name="Settings" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=505220712]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Settings"
+
+[node name="MainMenu" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2145502780]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Menu"
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1859028062]
+layout_mode = 2
+text = "Quit"

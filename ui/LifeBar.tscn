@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dsrag1t34y3x1"]
+
+[ext_resource type="Script" uid="uid://du1avrhl2q3t8" path="res://ui/life_bar.gd" id="1_dfai3"]
+[ext_resource type="Texture2D" uid="uid://bgjfkytony45h" path="res://ui/HeartsAssets/HeartsFrame1.png" id="2_bvfg0"]
+[ext_resource type="Texture2D" uid="uid://8eb1kvitravl" path="res://ui/HeartsAssets/HeartsFrame2.png" id="3_t15qk"]
+[ext_resource type="Texture2D" uid="uid://pt0rn418qgx6" path="res://ui/HeartsAssets/HeartsFrame3.png" id="4_mi6qt"]
+
+[node name="LifeBar" type="Control" unique_id=1830217776]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dfai3")
+full_heart = ExtResource("2_bvfg0")
+half_heart = ExtResource("3_t15qk")
+empty_heart = ExtResource("4_mi6qt")
+
+[node name="HeartsContainer" type="HBoxContainer" parent="." unique_id=1488621601]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Heart1" type="TextureRect" parent="HeartsContainer" unique_id=470615929]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="HeartsContainer" unique_id=1614231650]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="HeartsContainer" unique_id=58387349]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Heart4" type="TextureRect" parent="HeartsContainer" unique_id=200487673]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Heart5" type="TextureRect" parent="HeartsContainer" unique_id=2121845420]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 2
+stretch_mode = 5

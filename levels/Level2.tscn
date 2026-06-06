@@ -23,6 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://c4yytwvjegoff" path="res://characters (players_enemys)/boss.tscn" id="21_jnmpp"]
 [ext_resource type="PackedScene" uid="uid://0lmpe62fwxuq" path="res://hud.tscn" id="21_vfe3a"]
 [ext_resource type="PackedScene" uid="uid://diipacc5ir5ma" path="res://autoloads/NextLevel.tscn" id="23_k6hxo"]
+[ext_resource type="PackedScene" uid="uid://dsrag1t34y3x1" path="res://ui/LifeBar.tscn" id="24_aa0ii"]
+[ext_resource type="PackedScene" uid="uid://c7otvt1yxul3v" path="res://ShopMenu/ShopMenu.tscn" id="25_vcbjw"]
+[ext_resource type="PackedScene" uid="uid://dgj3t3ytup41d" path="res://ui/game_over.tscn" id="26_vcbjw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6hxo"]
 texture = ExtResource("1_jnmpp")
@@ -2004,15 +2007,6 @@ position = Vector2(1460, 866)
 [node name="player" parent="." unique_id=1788912813 instance=ExtResource("17_pb71r")]
 position = Vector2(634, 366)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1297539520]
-
-[node name="PauseMenu" parent="CanvasLayer" unique_id=1592950773 instance=ExtResource("20_nn1ti")]
-offset_top = 2.0
-offset_bottom = 2.0
-metadata/_edit_lock_ = true
-
-[node name="HUD" parent="." unique_id=2088576928 instance=ExtResource("21_vfe3a")]
-
 [node name="Boss" parent="." unique_id=703476347 instance=ExtResource("21_jnmpp")]
 position = Vector2(2076, 1025)
 
@@ -2025,3 +2019,34 @@ position = Vector2(3943, 190)
 position = Vector2(38, 326)
 shape = SubResource("SegmentShape2D_k6hxo")
 debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="PauseCanvas" type="CanvasLayer" parent="." unique_id=1297539520]
+
+[node name="PauseMenu" parent="PauseCanvas" unique_id=1592950773 instance=ExtResource("20_nn1ti")]
+offset_top = 2.0
+offset_bottom = 2.0
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." unique_id=2088576928 instance=ExtResource("21_vfe3a")]
+
+[node name="LifeBarCanvas" type="CanvasLayer" parent="." unique_id=675673836]
+
+[node name="LifeBar" parent="LifeBarCanvas" unique_id=1830217776 instance=ExtResource("24_aa0ii")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="ShopCanvas" type="CanvasLayer" parent="." unique_id=89485297]
+
+[node name="ShopMenu" parent="ShopCanvas" unique_id=1985314945 instance=ExtResource("25_vcbjw")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverCanvas" type="CanvasLayer" parent="." unique_id=53393947]
+
+[node name="GameOver" parent="GameOverCanvas" unique_id=841406529 instance=ExtResource("26_vcbjw")]
+process_mode = 3
