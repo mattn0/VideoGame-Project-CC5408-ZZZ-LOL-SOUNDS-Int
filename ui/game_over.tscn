@@ -61,6 +61,8 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Menu"
 
-[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1859028062]
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1793884846]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.9999998, 0.096829094, 0.091330476, 1)
 text = "Quit"
