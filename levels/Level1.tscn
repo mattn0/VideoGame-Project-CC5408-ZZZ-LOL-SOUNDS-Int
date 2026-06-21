@@ -2028,11 +2028,98 @@ scale = Vector2(1.2, 1.2)
 [node name="Golem" parent="." unique_id=2060251640 instance=ExtResource("18_6gurj")]
 position = Vector2(2448, 354)
 
+[node name="Golem2" parent="." unique_id=857758774 instance=ExtResource("18_6gurj")]
+position = Vector2(2129, 87)
+
+[node name="Golem4" parent="." unique_id=780477245 instance=ExtResource("18_6gurj")]
+position = Vector2(1618, 1330)
+
+[node name="Golem5" parent="." unique_id=1349642393 instance=ExtResource("18_6gurj")]
+position = Vector2(4839, 255)
+
+[node name="Golem6" parent="." unique_id=866741301 instance=ExtResource("18_6gurj")]
+position = Vector2(3409, -971)
+
+[node name="Golem7" parent="." unique_id=733941419 instance=ExtResource("18_6gurj")]
+position = Vector2(5683, -1263)
+
+[node name="Golem8" parent="." unique_id=453856804 instance=ExtResource("18_6gurj")]
+position = Vector2(5592, -52)
+
 [node name="enemy" parent="." unique_id=721203139 instance=ExtResource("19_0bnej")]
 position = Vector2(605, 535)
 
+[node name="enemy2" parent="." unique_id=1392006850 instance=ExtResource("19_0bnej")]
+position = Vector2(2000, 535)
+
+[node name="enemy7" parent="." unique_id=847165304 instance=ExtResource("19_0bnej")]
+position = Vector2(1837, 1695)
+
+[node name="enemy8" parent="." unique_id=1346623053 instance=ExtResource("19_0bnej")]
+position = Vector2(2227, 1864)
+
+[node name="enemy9" parent="." unique_id=111127441 instance=ExtResource("19_0bnej")]
+position = Vector2(3035, 213)
+
+[node name="enemy10" parent="." unique_id=1139529460 instance=ExtResource("19_0bnej")]
+position = Vector2(3014, -308)
+
+[node name="enemy11" parent="." unique_id=1674276009 instance=ExtResource("19_0bnej")]
+position = Vector2(3508, -308)
+
+[node name="enemy12" parent="." unique_id=265220474 instance=ExtResource("19_0bnej")]
+position = Vector2(3043, -1091)
+
+[node name="enemy13" parent="." unique_id=1761190622 instance=ExtResource("19_0bnej")]
+position = Vector2(3252, -1292)
+
+[node name="enemy14" parent="." unique_id=1582911043 instance=ExtResource("19_0bnej")]
+position = Vector2(3436, -1075)
+
+[node name="enemy15" parent="." unique_id=955165603 instance=ExtResource("19_0bnej")]
+position = Vector2(2947, 1172)
+
+[node name="enemy16" parent="." unique_id=1997159793 instance=ExtResource("19_0bnej")]
+position = Vector2(5332, -236)
+
+[node name="enemy17" parent="." unique_id=95654964 instance=ExtResource("19_0bnej")]
+position = Vector2(6092, -123)
+
+[node name="enemy18" parent="." unique_id=2143478487 instance=ExtResource("19_0bnej")]
+position = Vector2(6050, -495)
+
+[node name="enemy19" parent="." unique_id=1248681820 instance=ExtResource("19_0bnej")]
+position = Vector2(5561, -399)
+
+[node name="enemy20" parent="." unique_id=575886583 instance=ExtResource("19_0bnej")]
+position = Vector2(4220, 466)
+
+[node name="enemy3" parent="." unique_id=1401725154 instance=ExtResource("19_0bnej")]
+position = Vector2(1899, 254)
+
+[node name="enemy4" parent="." unique_id=1711389481 instance=ExtResource("19_0bnej")]
+position = Vector2(1784, 1051)
+
+[node name="enemy6" parent="." unique_id=1333499219 instance=ExtResource("19_0bnej")]
+position = Vector2(340, 213)
+
+[node name="enemy5" parent="." unique_id=411812470 instance=ExtResource("19_0bnej")]
+position = Vector2(753, 351)
+
 [node name="Boss" parent="." unique_id=703476347 instance=ExtResource("22_tsgrn")]
 position = Vector2(1759, 316)
+
+[node name="Boss2" parent="." unique_id=215998513 instance=ExtResource("22_tsgrn")]
+position = Vector2(2100, 1917)
+
+[node name="Boss4" parent="." unique_id=1939512786 instance=ExtResource("22_tsgrn")]
+position = Vector2(3634, -1276)
+
+[node name="Boss5" parent="." unique_id=2032313980 instance=ExtResource("22_tsgrn")]
+position = Vector2(3620, 1357)
+
+[node name="Boss8" parent="." unique_id=1941224684 instance=ExtResource("22_tsgrn")]
+position = Vector2(5748, -417)
 
 [node name="PauseCanvas" type="CanvasLayer" parent="." unique_id=1354676994]
 
