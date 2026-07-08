@@ -36,6 +36,8 @@ var room_height = 720
 var room_x = 0
 var room_y = 0
 
+var loadout_ui: LoadoutUI
+
 
 func _ready() -> void:
 	animation_player.play("idle")
@@ -57,28 +59,38 @@ func _ready() -> void:
 	_setup_roulette()
 	roulette_ui.roulette_manager = roulette_manager
 	
+	loadout_ui = LoadoutUI.new()
+	add_child(loadout_ui)
+	loadout_ui.setup(roulette_manager)
+	
 func _setup_roulette() -> void:
-	var attack = preload("res://abilities/basic_attack.tres")
-	var shield = preload("res://abilities/shield.tres")
-	var nothing = preload("res://abilities/nothing_ability.tres")
+	#var attack = preload("res://abilities/basic_attack.tres")
+	#var shield = preload("res://abilities/shield.tres")
+	#var nothing = preload("res://abilities/nothing_ability.tres")
+	#
+	#var make_slot = func(ability: Ability, index: int) -> SlotData:
+	#	var sd = SlotData.new()
+	#	sd.ability = ability
+	#	sd.weight = ability.weight
+	#	sd.slot_index = index
+	#	return sd
 	
-	var make_slot = func(ability: Ability, index: int) -> SlotData:
-		var sd = SlotData.new()
-		sd.ability = ability
-		sd.weight = ability.weight
-		sd.slot_index = index
-		return sd
+	#roulette_manager.configure_slot(0, make_slot.call(attack, 0))
+	#roulette_manager.configure_slot(1, make_slot.call(shield, 1))
+	#roulette_manager.configure_slot(2, make_slot.call(attack, 2))
+	#roulette_manager.configure_slot(3, make_slot.call(attack, 3))
+	#roulette_manager.configure_slot(4, make_slot.call(shield, 4))
+	#roulette_manager.configure_slot(5, make_slot.call(attack, 5))
+	#roulette_manager.configure_slot(6, make_slot.call(nothing, 6))
+	#roulette_manager.configure_slot(7, make_slot.call(nothing, 7))
+	#roulette_manager.configure_slot(8, make_slot.call(shield, 8))
+	#roulette_manager.configure_slot(9, make_slot.call(attack, 9))
 	
-	roulette_manager.configure_slot(0, make_slot.call(attack, 0))
-	roulette_manager.configure_slot(1, make_slot.call(shield, 1))
-	roulette_manager.configure_slot(2, make_slot.call(attack, 2))
-	roulette_manager.configure_slot(3, make_slot.call(attack, 3))
-	roulette_manager.configure_slot(4, make_slot.call(shield, 4))
-	roulette_manager.configure_slot(5, make_slot.call(attack, 5))
-	roulette_manager.configure_slot(6, make_slot.call(nothing, 6))
-	roulette_manager.configure_slot(7, make_slot.call(nothing, 7))
-	roulette_manager.configure_slot(8, make_slot.call(shield, 8))
-	roulette_manager.configure_slot(9, make_slot.call(attack, 9))
+	# Los 10 slots ya no están hardcodeados: LoadoutManager (autoload) guarda
+	# la configuración del jugador (cuántos de cada tipo, niveles de mejora,
+	# puntos) y la vuelca automáticamente a este RouletteManager cada vez
+	# que cambia, incluyendo esta primera vez.
+	LoadoutManager.register_roulette(roulette_manager)
 	
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -106,6 +118,19 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("attack") and not is_spinning:
 		_trigger_attack()
+		
+func _unhandled_input(event: InputEvent) -> void:
+	if is_spinning:
+		return
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_0 or event.keycode == KEY_J:
+			loadout_ui.toggle()
+			get_viewport().set_input_as_handled()
+
+## Punto de entrada para abrir el menú desde otro sistema, por ejemplo
+## al completar un nivel: player.open_loadout_menu()
+func open_loadout_menu() -> void:
+	loadout_ui.open()
 
 func _trigger_attack() -> void:
 	is_spinning = true
@@ -117,6 +142,12 @@ func _trigger_attack() -> void:
 	if result.ability.ability_name == "Basic_attack":
 		await get_tree().create_timer(1).timeout
 		var bullet_inst = bullet_scene.instantiate()
+		# La bala tiene su propio "damage" (HitboxComponent.damage) separado
+		# del "damage" de BasicAttack. Si no lo igualamos acá, la bala siempre
+		# pega el valor fijo de la escena y las mejoras de poder no le afectan.
+		if result.ability is BasicAttack:
+			bullet_inst.damage = int(result.ability.damage)
+		
 		get_parent().add_child(bullet_inst)
 		bullet_inst.global_position = bullet_mark.global_position
 		var mouse_direction = bullet_mark.global_position.direction_to(get_global_mouse_position())
@@ -152,6 +183,8 @@ func _on_damage_dealt() -> void:
 	
 func take_point(value: int) -> void:
 	point_sound.play()
+	point += value
+	LoadoutManager.add_points(value)
 	Debug.log("I gain %s points" % value)
 	animation_tree["parameters/take_point_oneshot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 	

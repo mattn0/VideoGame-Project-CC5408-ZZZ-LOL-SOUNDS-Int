@@ -27,6 +27,7 @@ func _on_settings_pressed() -> void:
 func _on_retry_pressed() -> void:
 	get_tree().paused = false
 	Game.mushroom = 0
+	LoadoutManager.reset_to_defaults()
 	get_tree().reload_current_scene()
 	
 func _on_main_menu_pressed() -> void:
