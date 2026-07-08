@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Hito_0"
 run/main_scene="uid://bxgro7ujm7tql"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://resources/icon.svg"
 
 [autoload]
@@ -20,6 +20,7 @@ config/icon="res://resources/icon.svg"
 Debug="*uid://cfrnxf12mx25b"
 Game="*uid://besdybpt115qs"
 LevelManager="*uid://c5iwxgveer78m"
+LoadoutManager="*uid://b6pnx4yenqup6"
 
 [display]
 

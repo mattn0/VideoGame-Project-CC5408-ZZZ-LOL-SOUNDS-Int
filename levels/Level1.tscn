@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://boqm81emqxnc4" path="res://ui/pause_menu.tscn" id="20_ccxey"]
 [ext_resource type="PackedScene" uid="uid://0lmpe62fwxuq" path="res://hud.tscn" id="21_tsgrn"]
 [ext_resource type="PackedScene" uid="uid://c4yytwvjegoff" path="res://characters (players_enemys)/boss.tscn" id="22_tsgrn"]
+[ext_resource type="PackedScene" uid="uid://b28mfnbbqlmrl" path="res://characters (players_enemys)/mushroom_point.tscn" id="23_8dxbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gurj"]
 texture = ExtResource("1_j4mar")
@@ -2041,3 +2042,18 @@ metadata/_edit_lock_ = true
 
 [node name="Boss" parent="." unique_id=703476347 instance=ExtResource("22_tsgrn")]
 position = Vector2(1759, 316)
+
+[node name="mushroom_point" parent="." unique_id=1540310177 instance=ExtResource("23_8dxbh")]
+position = Vector2(902, 380)
+
+[node name="mushroom_point2" parent="." unique_id=2036984187 instance=ExtResource("23_8dxbh")]
+position = Vector2(886, 441)
+
+[node name="mushroom_point3" parent="." unique_id=1944238763 instance=ExtResource("23_8dxbh")]
+position = Vector2(774, 382)
+
+[node name="mushroom_point4" parent="." unique_id=1398934123 instance=ExtResource("23_8dxbh")]
+position = Vector2(766, 448)
+
+[node name="mushroom_point5" parent="." unique_id=691333001 instance=ExtResource("23_8dxbh")]
+position = Vector2(839, 394)
