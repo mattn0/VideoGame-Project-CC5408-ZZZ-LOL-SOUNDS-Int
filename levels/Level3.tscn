@@ -18,6 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://pcagraoepglk" path="res://levels/AssetsScenes/Cemetery/Texture/TX Struct.png" id="16_w4yws"]
 [ext_resource type="Texture2D" uid="uid://cqjwlf3n73a1w" path="res://levels/AssetsScenes/Dungeon/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="17_en7ln"]
 [ext_resource type="Texture2D" uid="uid://bn6vkl0o1facu" path="res://levels/AssetsScenes/Cemetery/Texture/TX Props.png" id="18_5nt5t"]
+[ext_resource type="PackedScene" uid="uid://dsrag1t34y3x1" path="res://ui/LifeBar.tscn" id="19_w4yws"]
+[ext_resource type="PackedScene" uid="uid://c7otvt1yxul3v" path="res://ShopMenu/ShopMenu.tscn" id="20_en7ln"]
+[ext_resource type="PackedScene" uid="uid://boqm81emqxnc4" path="res://ui/pause_menu.tscn" id="21_en7ln"]
+[ext_resource type="PackedScene" uid="uid://dgj3t3ytup41d" path="res://ui/game_over.tscn" id="22_5nt5t"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u4y3f"]
 resource_name = "CemetaryRomms"
@@ -1738,3 +1742,32 @@ tile_set = SubResource("TileSet_1evas")
 [node name="NextLevel" parent="." unique_id=720976473 instance=ExtResource("14_t3rlc")]
 position = Vector2(4543, 544)
 scale = Vector2(1.2, 1.2)
+
+[node name="LifeBarCanvas" type="CanvasLayer" parent="." unique_id=2123429117]
+
+[node name="LifeBar" parent="LifeBarCanvas" unique_id=1830217776 instance=ExtResource("19_w4yws")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="ShopCanvas" type="CanvasLayer" parent="." unique_id=64932315]
+
+[node name="ShopMenu" parent="ShopCanvas" unique_id=1985314945 instance=ExtResource("20_en7ln")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1793745842]
+
+[node name="PauseMenu" parent="PauseMenu" unique_id=1592950773 instance=ExtResource("21_en7ln")]
+offset_top = 2.0
+offset_bottom = 2.0
+metadata/_edit_lock_ = true
+
+[node name="GameOverCanvas" type="CanvasLayer" parent="." unique_id=1974999669]
+
+[node name="GameOver" parent="GameOverCanvas" unique_id=841406529 instance=ExtResource("22_5nt5t")]
+process_mode = 3

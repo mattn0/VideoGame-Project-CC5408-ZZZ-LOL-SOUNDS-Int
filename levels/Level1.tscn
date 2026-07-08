@@ -22,6 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://boqm81emqxnc4" path="res://ui/pause_menu.tscn" id="20_ccxey"]
 [ext_resource type="PackedScene" uid="uid://0lmpe62fwxuq" path="res://hud.tscn" id="21_tsgrn"]
 [ext_resource type="PackedScene" uid="uid://c4yytwvjegoff" path="res://characters (players_enemys)/boss.tscn" id="22_tsgrn"]
+[ext_resource type="PackedScene" uid="uid://dsrag1t34y3x1" path="res://ui/LifeBar.tscn" id="23_8dxbh"]
+[ext_resource type="PackedScene" uid="uid://c7otvt1yxul3v" path="res://ShopMenu/ShopMenu.tscn" id="24_mq75a"]
+[ext_resource type="PackedScene" uid="uid://dgj3t3ytup41d" path="res://ui/game_over.tscn" id="25_ok7fr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gurj"]
 texture = ExtResource("1_j4mar")
@@ -2017,7 +2020,6 @@ tile_set = SubResource("TileSet_tsgrn")
 
 [node name="player" parent="." unique_id=2033268677 instance=ExtResource("15_rv5to")]
 position = Vector2(1187, 365)
-speed = 200
 
 [node name="NextLevel" parent="." unique_id=720976473 instance=ExtResource("17_1bxb8")]
 position = Vector2(6288, -336)
@@ -2029,15 +2031,36 @@ position = Vector2(2448, 354)
 [node name="enemy" parent="." unique_id=721203139 instance=ExtResource("19_0bnej")]
 position = Vector2(605, 535)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1354676994]
+[node name="Boss" parent="." unique_id=703476347 instance=ExtResource("22_tsgrn")]
+position = Vector2(1759, 316)
 
-[node name="PauseMenu" parent="CanvasLayer" unique_id=1592950773 instance=ExtResource("20_ccxey")]
-visible = false
+[node name="PauseCanvas" type="CanvasLayer" parent="." unique_id=1354676994]
+
+[node name="PauseMenu" parent="PauseCanvas" unique_id=1592950773 instance=ExtResource("20_ccxey")]
 offset_top = 2.0
 offset_bottom = 2.0
 metadata/_edit_lock_ = true
 
 [node name="HUD" parent="." unique_id=2088576928 instance=ExtResource("21_tsgrn")]
 
-[node name="Boss" parent="." unique_id=703476347 instance=ExtResource("22_tsgrn")]
-position = Vector2(1759, 316)
+[node name="LifeBarCanvas" type="CanvasLayer" parent="." unique_id=678648064]
+
+[node name="LifeBar" parent="LifeBarCanvas" unique_id=1830217776 instance=ExtResource("23_8dxbh")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="ShopCanvas" type="CanvasLayer" parent="." unique_id=283401555]
+
+[node name="ShopMenu" parent="ShopCanvas" unique_id=1985314945 instance=ExtResource("24_mq75a")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverCanvas" type="CanvasLayer" parent="." unique_id=1230722345]
+
+[node name="GameOver" parent="GameOverCanvas" unique_id=841406529 instance=ExtResource("25_ok7fr")]
+process_mode = 3

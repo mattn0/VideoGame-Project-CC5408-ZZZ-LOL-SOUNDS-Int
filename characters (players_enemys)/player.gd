@@ -1,7 +1,6 @@
 class_name Player
 extends CharacterBody2D
 
-@export var speed = 300
 @export var bullet_scene: PackedScene
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
@@ -14,14 +13,20 @@ extends CharacterBody2D
 @onready var ability_executor: AbilityExecutor = $AbilityExecutor
 @onready var roulette_ui: RouletteUI = $RouletteUI
 @onready var bullet_mark: Marker2D = $Bullet_mark
+@onready var shop_menu = $"../ShopCanvas/ShopMenu"
+@onready var game_over = $"../GameOverCanvas/GameOver"
 
-var maxlife = 100
-var life = 100
+signal life_changed(value)
+
+var maxlife: int
+var life: int
+var speed: int
 var point = 0
 var maxpoint = 3
 var knockback = Vector2.ZERO
 var knockback_force = 320
 var is_spinning := false
+var is_dead: bool = false
 
 # Tamaño de la sala
 var room_width = 1280
@@ -34,7 +39,11 @@ var room_y = 0
 
 func _ready() -> void:
 	animation_player.play("idle")
-	
+	add_to_group("player")
+	life = Game.player_data.life
+	maxlife = Game.player_data.max_life
+	speed = Game.player_data.speed
+
 	if camara:
 		camara.set_as_top_level(true)
 		#camara.zoom = Vector2(2, 2)
@@ -92,7 +101,8 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
-	
+	if Input.is_action_just_pressed("open_shop"):
+		shop_menu.visible = !shop_menu.visible	
 	
 	if Input.is_action_just_pressed("attack") and not is_spinning:
 		_trigger_attack()
@@ -121,15 +131,22 @@ func take_damage(value: int, badguy: Node2D) -> void:
 	animation_tree["parameters/take_damage_one/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 	animation_tree["parameters/take_point_oneshot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT
 	life -= value
-	
+	Game.player_data.life = life
+	life_changed.emit(life)
 	knockback = badguy.global_position.direction_to(global_position) * knockback_force
 	
 	if life <= 0:
-		sprite_2d.hide()
-		death_sound.play()
-		await get_tree().create_timer(0.5).timeout
-		queue_free()	
-	
+		_player_dead()
+
+func _player_dead() -> void:
+	print("PLAYER DEAD")
+	is_dead = true
+	sprite_2d.hide()
+	death_sound.play()
+	Game.player_data._reset_stats()
+	game_over.show_game_over()
+
+
 func _on_damage_dealt() -> void:
 	pass 
 	
@@ -165,3 +182,16 @@ func change_room(offset_x: float, offset_y: float):
 		await get_tree().create_timer(0.5).timeout
 		can_change_room = true
 		print(camara.global_position)
+		
+func add_health(amount: int):
+	life += amount
+	life = min(life, maxlife)
+	Game.player_data.life = life
+	life_changed.emit(life)
+
+func add_speed(amount: int):
+	speed += amount
+	Game.player_data.speed
+
+func buy_shield():
+	Debug.log("Escudo comprado")

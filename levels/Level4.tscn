@@ -13,6 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://bkfeydjd6mh5d" path="res://levels/Dungeon/Dungeon_E&W.tscn" id="11_flcl8"]
 [ext_resource type="PackedScene" uid="uid://d3hdsscmib1r" path="res://levels/Dungeon/Dungeon_N&S&E&W.tscn" id="12_luelv"]
 [ext_resource type="PackedScene" uid="uid://buuko6vt0qi76" path="res://characters (players_enemys)/player.tscn" id="13_6eg67"]
+[ext_resource type="PackedScene" uid="uid://dsrag1t34y3x1" path="res://ui/LifeBar.tscn" id="14_mcv5s"]
+[ext_resource type="PackedScene" uid="uid://c7otvt1yxul3v" path="res://ShopMenu/ShopMenu.tscn" id="15_o472v"]
+[ext_resource type="PackedScene" uid="uid://boqm81emqxnc4" path="res://ui/pause_menu.tscn" id="16_o472v"]
+[ext_resource type="PackedScene" uid="uid://dgj3t3ytup41d" path="res://ui/game_over.tscn" id="17_8giit"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u4y3f"]
 resource_name = "CemetaryRomms"
@@ -51,3 +55,32 @@ shape = SubResource("SegmentShape2D_uog4x")
 
 [node name="player" parent="." unique_id=1788912813 instance=ExtResource("13_6eg67")]
 position = Vector2(71, 384)
+
+[node name="LifeBarCanvas" type="CanvasLayer" parent="." unique_id=621510778]
+
+[node name="LifeBar" parent="LifeBarCanvas" unique_id=1830217776 instance=ExtResource("14_mcv5s")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="ShopCanvas" type="CanvasLayer" parent="." unique_id=2074493453]
+
+[node name="ShopMenu" parent="ShopCanvas" unique_id=1985314945 instance=ExtResource("15_o472v")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=407074]
+
+[node name="PauseMenu" parent="PauseMenu" unique_id=1592950773 instance=ExtResource("16_o472v")]
+offset_top = 2.0
+offset_bottom = 2.0
+metadata/_edit_lock_ = true
+
+[node name="GameOverCanvas" type="CanvasLayer" parent="." unique_id=160321508]
+
+[node name="GameOver" parent="GameOverCanvas" unique_id=841406529 instance=ExtResource("17_8giit")]
+process_mode = 3
