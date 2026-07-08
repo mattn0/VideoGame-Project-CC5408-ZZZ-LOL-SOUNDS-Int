@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c7otvt1yxul3v"]
+
+[ext_resource type="Script" uid="uid://c68k61065mxtk" path="res://ShopMenu/shop_menu.gd" id="1_5wp7t"]
+
+[node name="ShopMenu" type="Control" unique_id=1985314945]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5wp7t")
+
+[node name="Panel" type="Panel" parent="." unique_id=2027971767]
+layout_mode = 0
+offset_left = 945.0
+offset_top = 81.0
+offset_right = 1283.0
+offset_bottom = 244.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1885235371]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="vida_1" type="Button" parent="Panel/VBoxContainer" unique_id=473239892]
+layout_mode = 2
+text = "Comprar +20 de Vida (5 mushrooms)"
+
+[node name="velocidad_1" type="Button" parent="Panel/VBoxContainer" unique_id=1956641881]
+layout_mode = 2
+text = "Comprar +10 de Velocidad (5 mushrooms)"
+
+[node name="escudo_1" type="Button" parent="Panel/VBoxContainer" unique_id=1702444065]
+layout_mode = 2
+text = "Comprar +10 de Escudo (5 mushrooms)"
+
+[node name="cerrar" type="Button" parent="Panel/VBoxContainer" unique_id=1287873111]
+layout_mode = 2
+text = "Cerrar"

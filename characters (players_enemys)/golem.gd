@@ -62,7 +62,6 @@ func _physics_process(delta: float) -> void:
 		
 	knockback = lerp(knockback, Vector2.ZERO, 0.1)
 	velocity += knockback
-			
 	move_and_slide()
 	
 func _attack() -> void:

@@ -46,7 +46,6 @@ func _physics_process(delta: float) -> void:
 	#	velocity = Vector2.ZERO
 	#	move_and_slide()
 	#	return
-	
 	var distance = global_position.distance_to(player.position)
 	var direction = (player.position-position).normalized()
 		
@@ -60,7 +59,7 @@ func _physics_process(delta: float) -> void:
 		playback.travel("walk")
 		velocity = direction * speed
 		sprite_2d.flip_h = direction.x > 0
-			
+	
 	move_and_slide()
 	
 func _attack() -> void:
