@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bm0afa2gwtwaa" path="res://resources/parallax_layer_sky.png" id="2_8uxxo"]
 [ext_resource type="Texture2D" uid="uid://dox034nihwjyu" path="res://resources/parallax_layer_foreground.png" id="3_ei257"]
 [ext_resource type="Texture2D" uid="uid://cmvj65x4k71sj" path="res://resources/parallax_layer_mountains.png" id="3_p8ri8"]
-[ext_resource type="AudioStream" uid="uid://dii6w4sps772m" path="res://sounds/いざ、大冒険へ！.mp3" id="3_wk0pr"]
 
 [node name="MainMenu" type="Control" unique_id=608860208]
 process_mode = 3
@@ -122,8 +121,3 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9999998, 0.096829094, 0.091330476, 1)
 text = "Quit"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1172497392]
-stream = ExtResource("3_wk0pr")
-volume_db = -15.566
-autoplay = true

@@ -14,6 +14,8 @@ const TOTAL_SLOTS := 10
 
 const BASIC_ATTACK_PATH := "res://abilities/basic_attack.tres"
 const SHIELD_PATH := "res://abilities/shield.tres"
+const POISON_PATH := "res://abilities/poison_ability.tres"
+const EXPLOSION_PATH := "res://abilities/explosion_ability.tres"
 const NOTHING_PATH := "res://abilities/nothing_ability.tres"
 
 var options: Array[AbilityLoadoutOption] = []
@@ -221,9 +223,13 @@ func _find_recipient(exclude_id: String) -> String:
 ## Player._setup_roulette() (5 ataque / 3 escudo / 2 nada).
 func _set_default_distribution() -> void:
 	if get_option("basic_attack"):
-		loadout.slot_counts["basic_attack"] = 5
+		loadout.slot_counts["basic_attack"] = 4
 	if get_option("shield"):
-		loadout.slot_counts["shield"] = 3
+		loadout.slot_counts["shield"] = 2
+	if get_option("poison"):
+		loadout.slot_counts["poison"] = 1
+	if get_option("explosion"):
+		loadout.slot_counts["explosion"] = 1
 	if get_option("nothing"):
 		loadout.slot_counts["nothing"] = 2
 
@@ -254,6 +260,32 @@ func _build_default_options() -> Array[AbilityLoadoutOption]:
 	shield.upgrade_amount = 1.0
 	shield.upgrade_slot_cost = 1
 	shield.max_upgrade_level = 2
+	
+	var poison := AbilityLoadoutOption.new()
+	poison.ability_id = "poison"
+	poison.display_name = "Veneno"
+	poison.base_ability = load(POISON_PATH)
+	poison.min_slots = 0
+	poison.max_slots = 10
+	poison.point_cost_per_slot = 4
+	poison.upgradable = true
+	poison.upgrade_stat = "damage"
+	poison.upgrade_amount = 2
+	poison.upgrade_slot_cost = 1
+	poison.max_upgrade_level = 3
+	
+	var explosion := AbilityLoadoutOption.new()
+	explosion.ability_id = "explosion"
+	explosion.display_name = "explosion"
+	explosion.base_ability = load(EXPLOSION_PATH)
+	explosion.min_slots = 0
+	explosion.max_slots = 10
+	explosion.point_cost_per_slot = 4
+	explosion.upgradable = true
+	explosion.upgrade_stat = "damage"
+	explosion.upgrade_amount = 2
+	explosion.upgrade_slot_cost = 1
+	explosion.max_upgrade_level = 3	
 
 	var nothing := AbilityLoadoutOption.new()
 	nothing.ability_id = "nothing"
@@ -264,8 +296,11 @@ func _build_default_options() -> Array[AbilityLoadoutOption]:
 	nothing.point_cost_per_slot = 0
 	nothing.is_filler = true
 
+
 	var result: Array[AbilityLoadoutOption] = []
 	result.append(basic)
 	result.append(shield)
+	result.append(poison)
+	result.append(explosion)
 	result.append(nothing)
 	return result

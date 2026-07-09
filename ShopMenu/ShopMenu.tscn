@@ -23,6 +23,11 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Shop" type="Label" parent="Panel/VBoxContainer" unique_id=1405397467]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Tienda"
+
 [node name="vida_1" type="Button" parent="Panel/VBoxContainer" unique_id=473239892]
 layout_mode = 2
 text = "Comprar +20 de Vida (5 mushrooms)"

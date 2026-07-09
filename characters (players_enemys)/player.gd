@@ -1,7 +1,10 @@
 class_name Player
 extends CharacterBody2D
 
+@export var explosion_scene: PackedScene
+@export var poison_scene: PackedScene
 @export var bullet_scene: PackedScene
+@export var shield_scene: PackedScene
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var death_sound: AudioStreamPlayer = $DeathSound
@@ -27,6 +30,9 @@ var knockback = Vector2.ZERO
 var knockback_force = 320
 var is_spinning := false
 var is_dead: bool = false
+var shield_active := false
+var damage_reduction := 0.20
+var shield_instance: Node2D
 
 # Tamaño de la sala
 var room_width = 1280
@@ -152,20 +158,45 @@ func _trigger_attack() -> void:
 		bullet_inst.global_position = bullet_mark.global_position
 		var mouse_direction = bullet_mark.global_position.direction_to(get_global_mouse_position())
 		bullet_inst.global_rotation = mouse_direction.angle()
+	
 
 func activate_shield(duration: float) -> void:
-	Debug.log("Escudo activado por %.1f segundos" % duration)
-	# Aquí irá la lógica real de escudo en el futuro	
+	if shield_active:
+		return
+	shield_active = true
+	shield_instance = shield_scene.instantiate()
+	shield_instance.scale = Vector2(0.25,0.25)
+	add_child(shield_instance)
+	shield_instance.position = Vector2.ZERO
+	await get_tree().create_timer(duration).timeout
+	shield_active = false
+	if shield_instance:
+		shield_instance.break_shield()
+		shield_instance = null
+
+func cast_poison() -> void:
+	var poison = poison_scene.instantiate()
+	get_parent().add_child(poison)
+	poison.global_position = get_global_mouse_position() + Vector2(0,-48)
+
+func cast_explosion() -> void:
+	var explosion = explosion_scene.instantiate()
+	get_parent().add_child(explosion)
+	explosion.global_position = get_global_mouse_position() + Vector2(0, -50)
+
 
 func take_damage(value: int, badguy: Node2D) -> void:
 	#Debug.log("%s received %d damage" % [name, value])	
 	animation_tree["parameters/take_damage_one/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 	animation_tree["parameters/take_point_oneshot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT
+	if shield_active:
+		value = int(value * (1.0 - damage_reduction))
 	life -= value
 	Game.player_data.life = life
 	life_changed.emit(life)
+	print(life)
 	knockback = badguy.global_position.direction_to(global_position) * knockback_force
-	
+
 	if life <= 0:
 		_player_dead()
 

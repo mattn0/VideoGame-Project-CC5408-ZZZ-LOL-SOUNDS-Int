@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dojaujrfxkw0t"]
 
+[ext_resource type="Script" uid="uid://2pcjv1bdmwir" path="res://visual_effects/FantasySpells/spell_poison.gd" id="1_2ut81"]
 [ext_resource type="Texture2D" uid="uid://dia7eopdc0ks" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Fantasy Spells/spell_poison_001/spell_poison_001_large_green/spritesheet.png" id="1_3i6dt"]
+[ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="3_ydl7l"]
+[ext_resource type="AudioStream" uid="uid://2n2vho2dtbnq" path="res://sounds/soundreality-bubble-fx-343684.mp3" id="4_nv45y"]
 
 [sub_resource type="Animation" id="Animation_2ut81"]
 length = 0.001
@@ -39,7 +42,12 @@ _data = {
 &"SpellPoison": SubResource("Animation_ydl7l")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ydl7l"]
+radius = 12.0
+height = 52.0
+
 [node name="SpellPoison" type="Node2D" unique_id=1824303437]
+script = ExtResource("1_2ut81")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1933412642]
 texture = ExtResource("1_3i6dt")
@@ -47,3 +55,19 @@ hframes = 17
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=512397045]
 libraries/ = SubResource("AnimationLibrary_nv45y")
+
+[node name="AreaPoison" type="Area2D" parent="." unique_id=672490024]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("3_ydl7l")
+damage = 5
+metadata/_custom_type_script = "uid://c6vunqhf64ov2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPoison" unique_id=1106966435]
+position = Vector2(0, 48)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ydl7l")
+debug_color = Color(0.31764707, 0, 0.33333334, 0.7294118)
+
+[node name="PoisonAudio" type="AudioStreamPlayer" parent="." unique_id=1661186565]
+stream = ExtResource("4_nv45y")

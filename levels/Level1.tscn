@@ -2019,13 +2019,13 @@ tile_map_data = PackedByteArray("AACFAeT/AQAUABAAAACFAeX/AQAUABEAAACGAeT/AQAVABA
 tile_set = SubResource("TileSet_tsgrn")
 
 [node name="player" parent="." unique_id=2033268677 instance=ExtResource("15_rv5to")]
-position = Vector2(1187, 365)
+position = Vector2(1003, 371)
 
 [node name="NextLevel" parent="." unique_id=720976473 instance=ExtResource("17_1bxb8")]
 position = Vector2(6288, -336)
 scale = Vector2(1.2, 1.2)
 
-[node name="Golem" parent="." unique_id=2060251640 instance=ExtResource("18_6gurj")]
+[node name="Golem" parent="." unique_id=1664488558 instance=ExtResource("18_6gurj")]
 position = Vector2(2448, 354)
 
 [node name="enemy" parent="." unique_id=721203139 instance=ExtResource("19_0bnej")]
@@ -2054,13 +2054,15 @@ offset_bottom = -8.0
 [node name="ShopCanvas" type="CanvasLayer" parent="." unique_id=283401555]
 
 [node name="ShopMenu" parent="ShopCanvas" unique_id=1985314945 instance=ExtResource("24_mq75a")]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = -8.0
-offset_bottom = -8.0
+offset_top = -1.0
+offset_bottom = -1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="GameOverCanvas" type="CanvasLayer" parent="." unique_id=1230722345]
 
 [node name="GameOver" parent="GameOverCanvas" unique_id=841406529 instance=ExtResource("25_ok7fr")]
 process_mode = 3
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 2.0
+offset_bottom = -6.0

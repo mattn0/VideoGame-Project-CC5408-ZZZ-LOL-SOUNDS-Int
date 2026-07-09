@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://crrmpee5qokjv"]
 
+[ext_resource type="Script" uid="uid://ghb7bcowvryk" path="res://visual_effects/Explosions/explosion_spell.gd" id="1_d0wpl"]
 [ext_resource type="Texture2D" uid="uid://dxkblmpkp2yrs" path="res://visual_effects/Super Pixel Effects Gigapack (Free Version)/spritesheet/Explosions/epic_explosion_001/epic_explosion_001_large_orange/spritesheet.png" id="1_l5auq"]
+[ext_resource type="Script" uid="uid://c6vunqhf64ov2" path="res://components/hitbox_component.gd" id="3_igm0g"]
+[ext_resource type="AudioStream" uid="uid://cf3n27p82a4xg" path="res://sounds/freesound_community-explosion-80108.mp3" id="4_igm0g"]
 
 [sub_resource type="Animation" id="Animation_ynlb5"]
 resource_name = "Explosion1"
@@ -39,7 +42,12 @@ _data = {
 &"RESET": SubResource("Animation_fst73")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57qmd"]
+radius = 19.0
+height = 104.0
+
 [node name="ExplosionOrange" type="Node2D" unique_id=1727811391]
+script = ExtResource("1_d0wpl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=205824742]
 texture = ExtResource("1_l5auq")
@@ -47,3 +55,18 @@ hframes = 13
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1525724344]
 libraries/ = SubResource("AnimationLibrary_ydncj")
+
+[node name="AreaExplosion" type="Area2D" parent="." unique_id=16585793]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("3_igm0g")
+damage = 30
+metadata/_custom_type_script = "uid://c6vunqhf64ov2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaExplosion" unique_id=1530956634]
+position = Vector2(0, 50)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_57qmd")
+
+[node name="ExplosionAudio" type="AudioStreamPlayer" parent="." unique_id=863167966]
+stream = ExtResource("4_igm0g")

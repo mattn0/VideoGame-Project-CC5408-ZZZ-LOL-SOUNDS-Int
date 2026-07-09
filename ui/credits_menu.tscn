@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://vf5hp3388gk6"]
 
 [ext_resource type="Script" uid="uid://cecp8ybm6jqrw" path="res://ui/credits_menu.gd" id="1_6sxy1"]
-[ext_resource type="FontFile" uid="uid://6t3g78nnpqit" path="res://font/BoldPixels.ttf" id="2_4ph3m"]
-
-[sub_resource type="Theme" id="Theme_tgbea"]
-default_font = ExtResource("2_4ph3m")
-default_font_size = 35
+[ext_resource type="Theme" uid="uid://bjjde1serycx" path="res://resources/theme.tres" id="2_6sxy1"]
 
 [node name="Credits_menu" type="Control" unique_id=1046172576]
 layout_mode = 3
@@ -18,79 +14,83 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_6sxy1")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=161938529]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=864320657]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -5.0
+offset_bottom = -105.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=371700328]
-layout_mode = 2
-theme = SubResource("Theme_tgbea")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1454352513]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=551099444]
-layout_mode = 2
 size_flags_horizontal = 4
-theme_type_variation = &"HeaderLarge"
-theme_override_constants/line_spacing = 50
-theme_override_constants/paragraph_spacing = 1
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 9
-theme_override_constants/outline_size = 10
-theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 70
-text = "Credits"
+size_flags_vertical = 4
+theme = ExtResource("2_6sxy1")
+bbcode_enabled = true
+text = "[font_size=70][center]Credits[/center][/font_size]
+[font_size=50][center]Sprites & Visual Assets[/center][/font_size]
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1620771951]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "character asset by GoblinNoblin"
+character asset by GoblinNoblin
 
-[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=508786489]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "enemies asset by MonoPixelArt"
+enemies asset by MonoPixelArt
 
-[node name="Label4" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2012514580]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "objects asset by unbreaded"
+objects asset by unbreaded
 
-[node name="Label5" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=905120178]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "level asset by adrian8w"
+level asset by adrian8w
 
-[node name="Label6" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1885080371]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "font by @YukiPixels"
+font by @YukiPixels
 
-[node name="Label7" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1945931177]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "menu music by yourai"
+menu music by yourai
 
-[node name="Label8" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=865649843]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "sounds by freesound_community & DRAGON-STUDIO"
+sounds by freesound_community & DRAGON-STUDIO
 
-[node name="Label9" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=99881798]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Background menu pixel art by Cloude.ia :)"
+Background menu pixel art by Cloude.ia :)
 
-[node name="Back_credit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1438373423]
+Boss Demon Slime (Boss) by [url=https://chierit.itch.io/boss-demon-slime][color=aqua]Chierit[/color][/url]
+
+Super Pixel Effects Gigapack (Visual Effects) by [url=https://untiedgames.itch.io/super-pixel-effects-gigapack][color=aqua]Untied Games[/color][/url]
+
+Explosion Animations Pack (Explosion Spell) by [url=https://ansimuz.itch.io/explosion-animations-pack][color=aqua]Ansimuz[/color][/url]
+
+Pixel Art Top Down - Basic (Graveyard Tileset) by [url=https://cainos.itch.io/pixel-art-top-down-basic][color=aqua]Cainos[/color][/url]
+
+Dungeon Asset Pack (Dungeon Tileset) by [url=https://pixel-poem.itch.io/dungeon-assetpuck][color=aqua]Pixel Poem[/color][/url]
+
+Golems Pack (Golem Enemy) by [url=https://monopixelart.itch.io/golems-pack][color=aqua]Monopixelart[/color][/url]
+
+Sprout Lands Asset Pack (Environment) by [url=https://cupnooble.itch.io/sprout-lands-asset-pack][color=aqua]Cup Nooble[/color][/url]
+
+Monster Asset Pack (Enemies) by [url=https://deepdivegamestudio.itch.io/monsterassetpack][color=aqua]Deep Dive Game Studio[/color][/url]
+
+Super Epic Fantasy Weapons Pack (Weapons) by [url=https://babysamurai.itch.io/super-epic-fantasy-weapons-pack][color=aqua]Baby Samurai[/color][/url]
+
+Pixelated Hearts Spritesheet (Health UI) by [url=https://buddy-games.itch.io/pixelated-hearts-spritesheet][color=aqua]Buddy Games[/color][/url]
+
+Crimson Fantasy GUI (User Interface) by [url=https://byandrox.itch.io/crimson-fantasy-gui][color=aqua]ByAndrox[/color][/url]
+
+
+[font_size=50][center]Sound Effects[/center][/font_size]
+
+Explosion Spell Sound by [url=https://pixabay.com/sound-effects/film-special-effects-explosion-80108/][color=aqua]morganpurkis[/color][/url]
+
+Poison Spell Sound by [url=https://pixabay.com/sound-effects/film-special-effects-bubble-fx-343684/][color=aqua]SoundReality[/color][/url]
+
+Shield Spell Sound by [url=https://pixabay.com/sound-effects/film-special-effects-shield-guard-6963/][color=aqua]nekoninja[/color][/url]
+
+
+[font_size=50][center]Special Thanks[/center][/font_size]
+
+Thanks to all the artists and creators who make their work freely available to the game development community."
+
+[node name="Back_credit" type="Button" parent="." unique_id=1438373423]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
+layout_mode = 0
+offset_left = 538.0
+offset_top = 648.0
+offset_right = 838.0
+offset_bottom = 708.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Back"

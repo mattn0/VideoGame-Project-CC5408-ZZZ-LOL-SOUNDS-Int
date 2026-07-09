@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cpfdq8hmhypa6" path="res://character_resource/player-sprite-sheet.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://chwd25lgv6kdm" path="res://characters (players_enemys)/player.gd" id="1_onrkg"]
 [ext_resource type="AudioStream" uid="uid://dwox077j0k1ly" path="res://sounds/freesound_community-hurt_c_08-102842.mp3" id="2_4cr1n"]
+[ext_resource type="PackedScene" uid="uid://dojaujrfxkw0t" path="res://visual_effects/FantasySpells/SpellPoison.tscn" id="2_8rjkq"]
 [ext_resource type="PackedScene" uid="uid://bjvok0my2gnln" path="res://Bullet.tscn" id="2_f3tjm"]
+[ext_resource type="PackedScene" uid="uid://crrmpee5qokjv" path="res://visual_effects/Explosions/ExplosionOrange.tscn" id="2_tkdvj"]
 [ext_resource type="AudioStream" uid="uid://c6x1wocky255w" path="res://sounds/dragon-studio-pop-402323.mp3" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://ch7jbu24awdnw" path="res://visual_effects/Shield/ShieldGreen.tscn" id="3_n2t3d"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://i8igxsu4no4s" path="res://movement_animationtree.tres" id="4_440fc"]
 [ext_resource type="Script" uid="uid://ddu7x0vq7tgdr" path="res://components/hurtbox_component.gd" id="5_4cr1n"]
 [ext_resource type="Script" uid="uid://bvq7g4ft1ouow" path="res://characters (players_enemys)/roulette_manager.gd" id="7_fuk28"]
@@ -424,8 +427,10 @@ size = Vector2(27, 43)
 
 [node name="player" type="CharacterBody2D" unique_id=1788912813]
 script = ExtResource("1_onrkg")
-speed = 600
+explosion_scene = ExtResource("2_tkdvj")
+poison_scene = ExtResource("2_8rjkq")
 bullet_scene = ExtResource("2_f3tjm")
+shield_scene = ExtResource("3_n2t3d")
 
 [node name="camara" type="Camera2D" parent="." unique_id=731177840]
 

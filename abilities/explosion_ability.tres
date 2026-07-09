@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dy6kpsnsjp0pn"]
+
+[ext_resource type="Script" uid="uid://5bq378hpa2k6" path="res://abilities/explosion_ability.gd" id="1_p6pef"]
+
+[resource]
+script = ExtResource("1_p6pef")
+ability_name = "Explosion_ability"
+display_name = "Explosion_ability"
+metadata/_custom_type_script = "uid://bdyo6u1robj6b"

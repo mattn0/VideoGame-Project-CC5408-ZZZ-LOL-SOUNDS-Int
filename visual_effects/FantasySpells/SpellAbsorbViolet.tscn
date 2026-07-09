@@ -20,6 +20,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_tco6l"]
 resource_name = "SpellAbsorbViolet"
 length = 1.1
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

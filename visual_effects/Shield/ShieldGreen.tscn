@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://ch7jbu24awdnw"]
+
+[ext_resource type="Script" uid="uid://ck4wxylrq2070" path="res://visual_effects/Shield/shield_green.gd" id="1_do5p5"]
+[ext_resource type="Texture2D" uid="uid://7hebkjqplmeb" path="res://visual_effects/Shield_Effects/Shield Big size Green/Shield Elliptic Smooth Green/Shield Elliptic Smooth Scan Loop V1 384x512 Green.png" id="1_hesb4"]
+[ext_resource type="PackedScene" uid="uid://ca3g07s3h2qy" path="res://visual_effects/FantasySpells/SpellDefense.tscn" id="2_4uy1b"]
+[ext_resource type="Texture2D" uid="uid://o5fov273fyct" path="res://visual_effects/Shield_Effects/Shield Big size Green/Shield Elliptic Smooth Green/Shield Elliptic Smooth Crack Break 384x512 Green.png" id="2_do5p5"]
+[ext_resource type="AudioStream" uid="uid://bq8gh0u6vmgxa" path="res://sounds/freesound_community-shield-guard-6963.mp3" id="5_vhxsh"]
+
+[sub_resource type="Animation" id="Animation_4uy1b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShieldGreenBase:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShieldCrack:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vhxsh"]
+resource_name = "ShieldBase"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShieldGreenBase:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333337),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1), Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2), Vector2i(0, 3), Vector2i(1, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_4ol6m"]
+resource_name = "ShieldCrack"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShieldCrack:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hrhwb"]
+_data = {
+&"RESET": SubResource("Animation_4uy1b"),
+&"ShieldBase": SubResource("Animation_vhxsh"),
+&"ShieldCrack": SubResource("Animation_4ol6m")
+}
+
+[node name="ShieldGreen" type="Node2D" unique_id=902635543]
+script = ExtResource("1_do5p5")
+defense_spell = ExtResource("2_4uy1b")
+
+[node name="AnimationShield" type="AnimationPlayer" parent="." unique_id=1403438880]
+libraries/ = SubResource("AnimationLibrary_hrhwb")
+
+[node name="ShieldGreenBase" type="Sprite2D" parent="." unique_id=369945434]
+texture = ExtResource("1_hesb4")
+hframes = 4
+vframes = 4
+
+[node name="ShieldCrack" type="Sprite2D" parent="." unique_id=1779415098]
+texture = ExtResource("2_do5p5")
+hframes = 4
+vframes = 2
+
+[node name="ShieldAudio" type="AudioStreamPlayer" parent="." unique_id=514286899]
+stream = ExtResource("5_vhxsh")
